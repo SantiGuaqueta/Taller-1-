@@ -136,7 +136,7 @@ Escriba un programa que pida 5 números reales y calcule las siguientes operacio
 - La potencia del mayor número elevado al menor número
 La raíz cúbica del menor número
 
-Pedimos 5 variables enteras con la función input, a partir de esto definimos el promedio, como la suma de las variables dividida entre 5 luego, para establecer la mediana, hacemos una serie de comparaciones desde la función if, para así evaluar todas las comparaciones posibles entre los números dados y poder organizarlos de menor a mayor, y de esta forma identificar el número de la mitad Después definimos el promedio multiplicativo cómo la multiplicación de las variables elevada a la 5
+Pedimos 5 variables enteras con la función input, a partir de esto definimos el promedio, como la suma de las variables dividida entre 5 luego, para establecer la mediana, hacemos una serie de comparaciones desde la función if, para así evaluar todas las comparaciones posibles entre los números dados y poder organizarlos de menor a mayor, y de esta forma identificar el número de la mitad Después definimos el promedio multiplicativo cómo la multiplicación de las variables elevada a la 5. Una vez hecho esto, continuamos, usamos el código ya hecho para hallar la mediana para imprimir las variables en orden y le hacemos un cambio en el orden que queremos para que nos dé las variables, pero en este caso, de mayor a menor
 
 ``` python
 #El promedio
