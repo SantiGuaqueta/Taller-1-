@@ -85,7 +85,6 @@ else :
 ```
 [![Captura-de-pantalla-2023-03-14-165324.png](https://i.postimg.cc/8zNQgBJy/Captura-de-pantalla-2023-03-14-165324.png)](https://postimg.cc/dLHS8C9d)
 
-[![Diagrama-sin-t-tulo-drawio.png](https://i.postimg.cc/XvYRpjgd/Diagrama-sin-t-tulo-drawio.png)](https://postimg.cc/hXNyYq6t)
 
 ## Punto 5
 
@@ -136,690 +135,1399 @@ Escriba un programa que pida 5 números reales y calcule las siguientes operacio
 - Ordenar los números de forma descendente
 - La potencia del mayor número elevado al menor número
 La raíz cúbica del menor número
+
+Pedimos 5 variables enteras con la función input, a partir de esto definimos el promedio, como la suma de las variables dividida entre 5 luego, para establecer la mediana, hacemos una serie de comparaciones desde la función if, para así evaluar todas las comparaciones posibles entre los números dados y poder organizarlos de menor a mayor, y de esta forma identificar el número de la mitad Después definimos el promedio multiplicativo cómo la multiplicación de las variables elevada a la 5
+
 ``` python
-#Escriba un programa que pida 5 números reales y calcule las siguientes operaciones:
-n1 = int(input("ingrese un número: "))
-n2 = int(input("ingrese un número: "))
-n3 = int(input("ingrese un número: "))
-n4 = int(input("ingrese un número: "))
-n5 = int(input("ingrese un número: "))
 #El promedio
+
+
 prom = (n1+n2+n3+n4+n5)/5
 print("1) el promedio de los números dados es: ",prom)
-```
-``` pyton
+
+
 #La mediana
-def num():
-    if n1<n2 and n1<n3 and n1<n4 and n1<n5: #n1
-        if n2<n3 and n2<n4 and n2<n5: #n1 n2
-            if n3<n4 and n3<n5: #n1 n2 n3
-                if n4<n5: #n1 n2 n3 n4
-                    print(n1,n2,n3,n4,n5) #n1 n2 n3 n4 n5
-                elif n5<n4: #n1 n2 n3 n5
-                    print(n1,n2,n3,n5,n4) #n1 n2 n3 n5 n4
-            elif n4<n3 and n4<n5: #n1 n2 n4
-                if n3<n5: #n1 n2 n4 n3 n5
-                    print(n1,n2,n4,n3,n5)
-                elif n5<n3: #n1 n2 n4 n5 n3
-                    print(n1,n2,n4,n5,n3)
-            elif n5<n3 and n5<n4: #n1 n2 n5
-                if n3<n4: #n1 n2 n5 n3 n4
-                    print(n1,n2,n5,n3,n4)
-                elif n4<n3: #n1 n2 n5 n4 n3
-                    print(n1,n2,n5,n4,n3)
-        elif n3<n2 and n3<n4 and n3<n5: #n1 n3
-            if n2<n4 and n2<n5: #n1 n3 n2
-                if n4<n5: #n1 n3 n2 n4 n5
-                    print(n1,n3,n2,n4,n5)
-                elif n5<n4: #n1 n3 n2 n5 n4
-                    print(n1,n3,n2,n5,n4)
-            elif n4<n2 and n4<n5: #n1 n3 n4
-                if n2<n5: #n1 n3 n4 n2 n5
-                    print(n1,n3,n4,n2,n5)
-                elif n5<n2: #n1 n3 n4 n5 n2
-                    print(n1,n3,n4,n5,n2)
-            elif n5<n2 and n5<n4: #n1 n3 n5
-                if n2<n4: #n1 n3 n5 n2 n4
-                    print(n1,n3,n5,n2,n4)
-                elif n4<n2: #n1 n3 n5 n4 n2
-                    print(n1,n3,n5,n4,n2)
-        elif n4<n2 and n4<n3 and n4<n5: #n1 n4
-            if n2<n3 and n2<n5: #n1 n4 n2
-                if n3<n5: #n1 n4 n2 n3 n5
-                    print(n1,n4,n2,n3,n5)
-                elif n5<n3: #n1 n4 n2 n5 n3
-                    print(n1,n4,n2,n5,n3)
-            elif n3<n2 and n3<n5: #n1 n4 n3
-                if n2<n5:#n1 n4 n3 n2 n5
-                    print(n1,n4,n3,n2,n5)
-                elif n5<n2: #n1 n4 n3 n5 n2
-                    print(n1,n4,n3,n5,n2)
-            elif n5<n2 and n5<n3: #n1 n4 n5
-                if n2<n3: #n1 n4 n5 n2 n3
-                    print(n1,n4,n5,n2,n3)
-                elif n3<n2: #n1 n4 n5 n3 n2
-                    print(n1,n4,n5,n3,n2)
-        elif n5<n2 and n5<n3 and n5<n4: #n1 n5
-            if n2<n3 and n2<n4: #n1 n5 n2
-                if n3<n4: #n1 n5 n2 n3 n4
-                    print(n1,n5,n2,n3,n4)
-                elif n4<n3: #n1 n5 n2 n4 n3
-                    print(n1,n5,n2,n4,n3)
-            elif n3<n2 and n3<n4: #n1 n5 n3
-                if n2<n4:#n1 n5 n3 n2 n4
-                    print(n1,n5,n3,n2,n4)
-                elif n4<n2: #n1 n5 n3 n4 n2
-                    print(n1,n5,n3,n4,n2)
-            elif n4<n2 and n4<n3: #n1 n5 n4
-                if n2<n3:#n1 n5 n4 n2 n3
-                    print(n1,n5,n4,n2,n3)
-                elif n3<n2:#n1 n5 n4 n3 n2
-                    print(n1,n5,n4,n3,n2)
-    elif n2<n1 and n2<n3 and n2<n4 and n2<n5: #n2
-        if n1<n3 and n1<n4 and n1<n5: #n2 n1
-            if n3<n4 and n3<n5: #n2 n1 n3
-                if n4<n5: #n2 n1 n3 n4 n5
-                    print(n2,n1,n3,n4,n5)
-                elif n5<n4: #n2 n1 n3 n5 n4
-                    print(n2,n1,n3,n5,n4)
-            elif n4<n3 and n4<n5: #n2 n1 n4
-                if n3<n5: #n2 n1 n4 n3 n5
-                    print(n2,n1,n4,n3,n5)
-                elif n5<n3: #n2 n1 n4 n5 n3
-                    print(n2,n1,n4,n5,n3)
-            elif n5<n3 and n5<n4: #n2 n1 n5
-                if n3<n4: #n2 n1 5n n3 n4
-                    print(n2,n1,n5,n3,n4)
-                elif n4<n3: #n2 n1 n5 n4 n3
-                    print(n2,n1,n5,n4,n3)
-        elif n3<n1 and n3<n4 and n3<n5: #n2 n3
-            if n1<n4 and n1<n5: #n2 n3 n1
-                if n4<n5: #n2 n3 n1 n4 n5
-                    print(n2,n3,n1,n4,n5)
-                elif n5<n4: #n2 n3 n1 n5 n4
-                    print(n2,n3,n1,n5,n4)
-            elif n4<n1 and n4<n5: #n2 n3 n4
-                if n1<n5: #n2 n3 n4 n1 n5
-                    print(n2,n3,n4,n1,n5)
-                elif n5<n1: #n2 n3 n4 n5 n1
-                    print(n2,n3,n4,n5,n1)
-            elif n5<n1 and n5<n4: #n2 n3 n5
-                if n1<n4: #n2 n3 n5 n1 n4
-                    print(n2,n3,n5,n1,n4)
-                elif n4<n1: #n2 n3 n5 n4 n1
-                    print(n2,n3,n5,n4,n1)
-        elif n4<n1 and n4<n3 and n4<n5: #n2 n4
-            if n1<n3 and n1<n5:#n2 n4 n1
-                if n3<n5: #n2 n4 n1 n3 n5
-                    print(n2,n4,n1,n3,n5)
-                elif n5<n3: #n2 n4 n1 n5 n3
-                    print(n2,n4,n1,n5,n3)
-            elif n3<n1 and n3<n5: #n2 n4 n3
-                if n1<n5: #n2 n4 n3 n1 n5
-                    print(n2,n4,n3,n1,n5)
-                elif n5<n1: #n2 n4 n3 n5 n1
-                    print(n2,n4,n3,n5,n1)
-            elif n5<n1 and n5<n3: #n2 n4 n5
-                if n1<n3:#n2 n4 n5 n1 n3
-                    print(n2,n4,n5,n1,n3)
-                elif n3<n1: #n2 n4 n5 n3 n1
-                    print(n2,n4,n5,n3,n1)
-        elif n5<n1 and n5<n3 and n5<n4: #n2 n5
-            if n1<n3 and n1<n4: #n2 n5 n1
-                if n3<n4: #n2 n5 n1 n3 n4
-                    print(n2,n5,n1,n3,n4)
-                elif n4<n3: #n2 n5 n1 n4 n3
-                    print(n2,n5,n1,n4,n3)
-            elif n3<n1 and n3<n4: #n2 n5 n3
-                if n1<n4: #n2 n5 n3 n1 n4
-                    print(n2,n5,n3,n1,n4)
-                elif n4<n1: #n2 n5 n3 n4 n1
-                    print(n2,n5,n3,n4,n1)
-            elif n4<n1 and n4<n3: #n2 n5 n4
-                if n1<n3: #n2 n5 n4 n1 n3
-                    print(n2,n5,n4,n1,n3)
-                elif n3<n1: #n2 n5 n4 n3 n1
-                    print(n2,n5,n4,n3,n1)
-    elif n3<n1 and n3<n2 and n3<n4 and n3<n5:#n3
-        if n1<n2 and n1<n4 and n1<n5: #n3 n1
-            if n2<n4 and n2<n5: #n3 n1 n2
-                if n4<n5: #n3 n1 n2 n4 n5
-                    print(n3,n1,n2,n4,n5)
-                elif n5<n4: #n3 n1 n2 n5 n4
-                    print(n3,n1,n2,n5,n4)
-            elif n4<n2 and n4<n5: #n3 n1 n4
-                if n2<n5: #n3 n1 n4 n2 n5
-                    print(n3,n1,n4,n2,n5)
-                elif n5<n2: #n3 n1 n4 n5 n2
-                    print(n3,n1,n4,n5,n2)
-            elif n5<n2 and n5<n4: #n3 n1 n5
-                if n2<n4: #n3 n1 n5 n2 n4
-                    print(n3,n1,n5,n2,n4)
-                elif n4<n2: #n3 n1 n5 n4 n2
-                    print(n3,n1,n5,n4,n2)
-        elif n2<n1 and n2<n4 and n2<n5: #n3 n2
-            if n1<n4 and n1<n5: #n3 n2 n1
-                if n4<n5: #n3 n2 n1 n4 n5
-                    print(n3,n2,n1,n4,n5)
-                elif n5<n4: #n3 n2 n1 n5 n4
-                    print(n3,n2,n1,n5,n4)
-            if n4<n1 and n4<n5: #n3 n2 n4
-                if n1<n5: #n3 n2 n4 n1 n5
-                    print(n3,n2,n4,n1,n5)
-                elif n5<n1: #n3 n2 n4 n5 n1
-                    print(n3,n2,n4,n5,n1)
-            if n5<n1 and n5<n4: #n3 n2 n5
-                if n1<n4: #n3 n2 n5 n1 n4
-                    print(n3,n2,n5,n1,n4)
-                elif n4<n1: #n3 n2 n5 n4 n1
-                    print(n3,n2,n5,n4,n1)
-        elif n4<n1 and n4<n2 and n4<n5: #n3 n4
-            if n1<n2 and n1<n5: #n3 n4 n1
-                if n2<n5: #n3 n4 n1 n2 n5
-                    print(n3,n4,n1,n2,n5)
-                elif n5<n2: #n3 n4 n1 n5 n2
-                    print(n3,n4,n1,n5,n2)
-            elif n2<n1 and n2<n5: #n3 n4 n2
-                if n1<n5: #n3 n4 n2 n1 n5
-                    print(n3,n4,n2,n1,n5)
-                elif n5<n1: #n3 n4 n2 n5 n1
-                    print(n3,n4,n2,n5,n1)
-            elif n5<n1 and n5<n2: #n3 n4 n5
-                if n1<n2: #n3 n4 n5 n1 n2
-                    print(n3,n4,n5,n1,n2)
-                elif n2<n1: #n3 n4 n5 n2 n1
-                    print(n3,n4,n5,n2,n1)
-        elif n5<n1 and n5<n2 and n5<n4: #n3 n5
-            if n1<n2 and n1<n4: #n3 n5 n1
-                if n2<n4: #n3 n5 n1 n2 n4
-                    print(n3,n5,n1,n2,n4)
-                elif n4<n2: #n3 n5 n1 n4 n2
-                    print(n3,n5,n1,n4,n2)
-            elif n2<n1 and n2<n4: #n3 n5 n2
-                if n1<n4: #n3 n5 n2 n1 n4
-                    print(n3,n5,n2,n1,n4)
-                elif n4<n1: #n3 n5 n2 n4 n1
-                    print(n3,n5,n2,n4,n1)
-            elif n4<n1 and n4<n2: #n3 n5 n4
-                if n1<n2: #n3 n5 n4 n1 n2
-                    print(n3,n5,n4,n1,n2)
-                elif n2<n1: #n3 n5 n4 n2 n1
-                    print(n3,n5,n4,n2,n1)
-    elif n4<n1 and n4<n2 and n4<n3 and n4<n5:#n4
-        if n1<n2 and n1<n3 and n1<n5: #n4 n1
-            if n2<n3 and n2<n5: #n4 n1 n2
-                if n3<n5: #n4 n1 n2 n3 n5
-                    print(n4,n1,n2,n3,n5)
-                elif n5<n3: #n4 n1 n2 n5 n3
-                    print(n4,n1,n2,n5,n3)
-            elif n3<n2 and n3<n5: #n4 n1 n3
-                if n2<n5: #n4 n1 n3 n2 n5
-                    print(n4,n1,n3,n2,n5)
-                elif n5<n2: #n4 n1 n3 n5 n2
-                    print(n4,n1,n3,n5,n2)
-            elif n5<n2 and n5<n3: #n4 n1 n5
-                if n2<n3: #n4 n1 n5 n2 n3
-                    print(n4,n1,n5,n2,n3)
-                elif n3<n2: #n4 n1 n5 n3 n2
-                    print(n4,n1,n5,n3,n2)
-        elif n2<n1 and n2<n3 and n2<n5: #n4 n2
-            if n1<n3 and n1<n5: #n4 n2 n1
-                if n3<n5: #n4 n2 n1 n3 n5
-                    print(n4,n2,n1,n3,n5)
-                elif n5<n3: #n4 n2 n1 n5 n3
-                    print(n4,n2,n1,n5,n3)
-            elif n3<n1 and n3<n5: #n4 n2 n3
-                if n1<n5: #n4 n2 n3 n1 n5
-                    print(n4,n2,n3,n1,n5)
-                elif n5<n1: #n4 n2 n3 n5 n1
-                    print(n4,n2,n3,n5,n1)
-            elif n5<n1 and n5<n3: #n4 n2 n5
-                if n1<n3: #n4 n2 n5 n1 n3
-                    print(n4,n2,n5,n1,n3)
-                elif n3<n1: #n4 n2 n5 n3 n1
-                    print(n4,n2,n5,n3,n1)
-        elif n3<n1 and n3<n2 and n3<n5: #n4 n3
-            if n1<n2 and n1<n5: #n4 n3 n1
-                if n2<n5: #n4 n3 n1 n2 n5
-                    print(n4,n3,n1,n2,n5)
-                elif n5<n2: #n4 n3 n1 n5 n2
-                    print(n4,n3,n1,n5,n2)
-            elif n2<n1 and n2<n5: #n4 n3 n2
-                if n1<n5: #n4 n3 n2 n1 n5
-                    print(n4,n3,n2,n1,n5)
-                elif n5<n1: #n4 n3 n2 n5 n1
-                    print(n4,n3,n2,n5,n1)
-            elif n5<n1 and n5<n2: #n4 n3 n5
-                if n1<n2: #n4 n3 n5 n1 n2
-                    print(n4,n3,n5,n1,n2)
-                elif n2<n1: #n4 n3 n5 n2 n1
-                    print(n4,n3,n5,n2,n1)
-        elif n5<n1 and n5<n2 and n5<n3: #n4 n5
-            if n1<n2 and n1<n3: #n4 n5 n1
-                if n2<n3: #n4 n5 n1 n2 n3
-                    print(n4,n5,n1,n2,n3)
-                elif n3<n2: #n4 n5 n1 n3 n2
-                    print(n4,n5,n1,n3,n2)
-            elif n2<n1 and n2<n3: #n4 n5 n2
-                if n1<n3: #n4 n5 n2 n1 n3
-                    print(n4,n5,n2,n1,n3)
-                elif n3<n1: #n4 n5 n2 n3 n1
-                    print(n4,n5,n2,n3,n1)
-            elif n3<n1 and n3<n2: #n4 n5 n3
-                if n1<n2: #n4 n5 n3 n1 n2
-                    print(n4,n5,n3,n1,n2)
-                elif n2<n1: #n4 n5 n3 n2 n1
-                    print(n4,n5,n3,n2,n1)
-    elif n5<n1 and n5<n2 and n5<n3 and n5<n4: #n5
-        if n1<n2 and n1<n3 and n1<n4: #n5 n1
-            if n2<n3 and n2<n4: #n5 n1 n2
-                if n3<n4: #n5 n1 n2 n3 n4
-                    print(n5,n1,n2,n3,n4)
-                elif n4<n3: #n5 n1 n2 n4 n3
-                    print(n5,n1,n2,n4,n3)
-            elif n3<n2 and n3<n4: #n5 n1 n3
-                if n2<n4: #n5 n1 n3 n2 n4
-                    print(n5,n1,n3,n2,n4)
-                elif n4<n2: #n5 n1 n3 n4 n2
-                    print(n5,n1,n3,n4,n2)
-            elif n4<n2 and n4<n3: #n5 n1 n4
-                if n2<n3: #n5 n1 n4 n2 n3
-                    print(n5,n1,n4,n2,n3)
-                elif n3<n2: #n5 n1 n4 n3 n2
-                    print(n5,n1,n4,n3,n2)
-        elif n2<n1 and n2<n3 and n2<n4: #n5 n2
-            if n1<n3 and n1<n4:#n5 n2 n1
-                if n3<n4: #n5 n2 n1 n3 n4
-                    print(n5,n2,n1,n3,n4)
-                elif n4<n3: #n5 n2 n1 n4 n3
-                    print(n5,n2,n1,n4,n3)
-            elif n3<n1 and n3<n4: #n5 n2 n3
-                if n1<n4: #n5 n2 n3 n1 n4
-                    print(n5,n2,n3,n1,n4)
-                elif n4<n1: #n5 n2 n3 n4 n1
-                    print(n5,n2,n3,n4,n1)
-            elif n4<n1 and n4<n3: #n5 n2 n4
-                if n1<n3: #n5 n2 n4 n1 n3
-                    print(n5,n2,n4,n1,n3)
-                elif n3<n1: #n5 n2 n4 n3 n1
-                    print(n5,n2,n4,n3,n1)
-        elif n3<n1 and n3<n2 and n3<n4: #n5 n3
-            if n1<n2 and n1<n4: #n5 n3 n1
-                if n2<n4: #n5 n3 n1 n2 n4
-                    print(n5,n3,n1,n2,n4)
-                elif n4<n2: #n5 n3 n1 n4 n2
-                    print(n5,n3,n1,n4,n2)
-            elif n2<n1 and n2<n4: #n5 n3 n2
-                if n1<n4: #n5 n3 n2 n1 n4
-                    print(n5,n3,n2,n1,n4)
-                elif n4<n1: #n5 n3 n2 n4 n1
-                    print(n5,n3,n2,n4,n1)
-            elif n4<n1 and n4<n2: #n5 n3 n4
-                if n1<n2: #n5 n3 n4 n1 n2
-                    print(n5,n3,n4,n1,n2)
-                elif n2<n1: #n5 n3 n4 n2 n1
-                    print(n5,n3,n4,n2,n1)
-        elif n4<n1 and n4<n2 and n4<n3: #n5 n4
-            if n1<n2 and n1<n3: #n5 n4 n1
-                if n2<n3: #n5 n4 n1 n2 n3
-                    print(n5,n4,n1,n2,n3)
-                elif n3<n2: #n5 n4 n1 n3 n2
-                    print(n5,n4,n1,n3,n2)
-            elif n2<n1 and n2<n3: #n5 n4 n2
-                if n1<n3: #n5 n4 n2 n1 n3
-                    print(n5,n4,n2,n1,n3)
-                elif n3<n1: #n5 n4 n2 n3 n1
-                    print(n5,n4,n2,n3,n1)
-            elif n3<n1 and n3<n2: #n5 n4 n3
-                if n1<n2: #n5 n4 n3 n1 n2
-                    print(n5,n4,n3,n1,n2)
-                elif n2<n1: #n5 n4 n3 n2 n1
-                    print(n5,n4,n3,n2,n1)
-```
-``` python
-print("2) La mediana de los números dados es el número de la mitad ",num(m3))
-#El promedio multiplicativo (multiplica todos y luego calcula la raíz de la cantidad de operandos)
+
+
+
+
+if n1<n2 and n1<n3 and n1<n4 and n1<n5: #n1
+    if n2<n3 and n2<n4 and n2<n5: #n1 n2
+        if n3<n4 and n3<n5: #n1 n2 n3
+            if n4<n5: #n1 n2 n3 n4
+                m1,m2,m3,m4,m5 =n1,n2,n3,n4,n5 #n1 n2 n3 n4 n5
+                print(m1,m2,m3,m4,m5)
+            elif n5<n4: #n1 n2 n3 n5
+                m1,m2,m3,m4,m5 =n1,n2,n3,n5,n4 #n1 n2 n3 n5 n4
+                print(m1,m2,m3,m4,m5)
+        elif n4<n3 and n4<n5: #n1 n2 n4
+            if n3<n5: #n1 n2 n4 n3 n5
+                m1,m2,m3,m4,m5 =n1,n2,n4,n3,n5
+                print(m1,m2,m3,m4,m5)
+            elif n5<n3: #n1 n2 n4 n5 n3
+                m1,m2,m3,m4,m5 =n1,n2,n4,n5,n3
+                print(m1,m2,m3,m4,m5)
+        elif n5<n3 and n5<n4: #n1 n2 n5
+            if n3<n4: #n1 n2 n5 n3 n4
+                m1,m2,m3,m4,m5 =n1,n2,n5,n3,n4
+                print(m1,m2,m3,m4,m5)
+            elif n4<n3: #n1 n2 n5 n4 n3
+                m1,m2,m3,m4,m5 =n1,n2,n5,n4,n3
+                print(m1,m2,m3,m4,m5)
+    elif n3<n2 and n3<n4 and n3<n5: #n1 n3
+        if n2<n4 and n2<n5: #n1 n3 n2
+            if n4<n5: #n1 n3 n2 n4 n5
+                m1,m2,m3,m4,m5 =n1,n3,n2,n4,n5
+                print(m1,m2,m3,m4,m5)
+            elif n5<n4: #n1 n3 n2 n5 n4
+                m1,m2,m3,m4,m5 =n1,n3,n2,n5,n4
+                print(m1,m2,m3,m4,m5)
+        elif n4<n2 and n4<n5: #n1 n3 n4
+            if n2<n5: #n1 n3 n4 n2 n5
+                m1,m2,m3,m4,m5 =n1,n3,n4,n2,n5
+                print(m1,m2,m3,m4,m5)
+            elif n5<n2: #n1 n3 n4 n5 n2
+                m1,m2,m3,m4,m5 =n1,n3,n4,n5,n2
+                print(m1,m2,m3,m4,m5)
+        elif n5<n2 and n5<n4: #n1 n3 n5
+            if n2<n4: #n1 n3 n5 n2 n4
+                m1,m2,m3,m4,m5 =n1,n3,n5,n2,n4
+                print(m1,m2,m3,m4,m5)
+            elif n4<n2: #n1 n3 n5 n4 n2
+                m1,m2,m3,m4,m5 =n1,n3,n5,n4,n2
+                print(m1,m2,m3,m4,m5)
+    elif n4<n2 and n4<n3 and n4<n5: #n1 n4
+        if n2<n3 and n2<n5: #n1 n4 n2
+            if n3<n5: #n1 n4 n2 n3 n5
+                m1,m2,m3,m4,m5 =n1,n4,n2,n3,n5
+                print(m1,m2,m3,m4,m5)
+            elif n5<n3: #n1 n4 n2 n5 n3
+                m1,m2,m3,m4,m5 =n1,n4,n2,n5,n3
+                print(m1,m2,m3,m4,m5)
+        elif n3<n2 and n3<n5: #n1 n4 n3
+            if n2<n5:#n1 n4 n3 n2 n5
+                m1,m2,m3,m4,m5 =n1,n4,n3,n2,n5
+                print(m1,m2,m3,m4,m5)
+            elif n5<n2: #n1 n4 n3 n5 n2
+                m1,m2,m3,m4,m5 =n1,n4,n3,n5,n2
+                print(m1,m2,m3,m4,m5)
+        elif n5<n2 and n5<n3: #n1 n4 n5
+            if n2<n3: #n1 n4 n5 n2 n3
+                m1,m2,m3,m4,m5 =n1,n4,n5,n2,n3
+                print(m1,m2,m3,m4,m5)
+            elif n3<n2: #n1 n4 n5 n3 n2
+                m1,m2,m3,m4,m5 =n1,n4,n5,n3,n2
+                print(m1,m2,m3,m4,m5)
+    elif n5<n2 and n5<n3 and n5<n4: #n1 n5
+        if n2<n3 and n2<n4: #n1 n5 n2
+            if n3<n4: #n1 n5 n2 n3 n4
+                m1,m2,m3,m4,m5 =n1,n5,n2,n3,n4
+                print(m1,m2,m3,m4,m5)
+            elif n4<n3: #n1 n5 n2 n4 n3
+                m1,m2,m3,m4,m5 =n1,n5,n2,n4,n3
+                print(m1,m2,m3,m4,m5)
+        elif n3<n2 and n3<n4: #n1 n5 n3
+            if n2<n4:#n1 n5 n3 n2 n4
+                m1,m2,m3,m4,m5 =n1,n5,n3,n2,n4
+                print(m1,m2,m3,m4,m5)
+            elif n4<n2: #n1 n5 n3 n4 n2
+                m1,m2,m3,m4,m5 =n1,n5,n3,n4,n2
+                print(m1,m2,m3,m4,m5)
+        elif n4<n2 and n4<n3: #n1 n5 n4
+            if n2<n3:#n1 n5 n4 n2 n3
+                m1,m2,m3,m4,m5 =n1,n5,n4,n2,n3
+                print(m1,m2,m3,m4,m5)
+            elif n3<n2:#n1 n5 n4 n3 n2
+                m1,m2,m3,m4,m5 =n1,n5,n4,n3,n2
+                print(m1,m2,m3,m4,m5)
+elif n2<n1 and n2<n3 and n2<n4 and n2<n5: #n2
+    if n1<n3 and n1<n4 and n1<n5: #n2 n1
+        if n3<n4 and n3<n5: #n2 n1 n3
+            if n4<n5: #n2 n1 n3 n4 n5
+                m1,m2,m3,m4,m5 =n2,n1,n3,n4,n5
+                print(m1,m2,m3,m4,m5)
+            elif n5<n4: #n2 n1 n3 n5 n4
+                m1,m2,m3,m4,m5 =n2,n1,n3,n5,n4
+                print(m1,m2,m3,m4,m5)
+        elif n4<n3 and n4<n5: #n2 n1 n4
+            if n3<n5: #n2 n1 n4 n3 n5
+                m1,m2,m3,m4,m5 =n2,n1,n4,n3,n5
+                print(m1,m2,m3,m4,m5)
+            elif n5<n3: #n2 n1 n4 n5 n3
+                m1,m2,m3,m4,m5 =n2,n1,n4,n5,n3
+                print(m1,m2,m3,m4,m5)
+        elif n5<n3 and n5<n4: #n2 n1 n5
+            if n3<n4: #n2 n1 5n n3 n4
+                m1,m2,m3,m4,m5 =n2,n1,n5,n3,n4
+                print(m1,m2,m3,m4,m5)
+            elif n4<n3: #n2 n1 n5 n4 n3
+                m1,m2,m3,m4,m5 =n2,n1,n5,n4,n3
+                print(m1,m2,m3,m4,m5)
+    elif n3<n1 and n3<n4 and n3<n5: #n2 n3
+        if n1<n4 and n1<n5: #n2 n3 n1
+            if n4<n5: #n2 n3 n1 n4 n5
+                m1,m2,m3,m4,m5 =n2,n3,n1,n4,n5
+                print(m1,m2,m3,m4,m5)
+            elif n5<n4: #n2 n3 n1 n5 n4
+                m1,m2,m3,m4,m5 =n2,n3,n1,n5,n4
+                print(m1,m2,m3,m4,m5)
+        elif n4<n1 and n4<n5: #n2 n3 n4
+            if n1<n5: #n2 n3 n4 n1 n5
+                m1,m2,m3,m4,m5 =n2,n3,n4,n1,n5
+                print(m1,m2,m3,m4,m5)
+            elif n5<n1: #n2 n3 n4 n5 n1
+                m1,m2,m3,m4,m5 =n2,n3,n4,n5,n1
+                print(m1,m2,m3,m4,m5)
+        elif n5<n1 and n5<n4: #n2 n3 n5
+            if n1<n4: #n2 n3 n5 n1 n4
+                m1,m2,m3,m4,m5 =n2,n3,n5,n1,n4
+                print(m1,m2,m3,m4,m5)
+            elif n4<n1: #n2 n3 n5 n4 n1
+                m1,m2,m3,m4,m5 =n2,n3,n5,n4,n1
+                print(m1,m2,m3,m4,m5)
+    elif n4<n1 and n4<n3 and n4<n5: #n2 n4
+        if n1<n3 and n1<n5:#n2 n4 n1
+            if n3<n5: #n2 n4 n1 n3 n5
+                m1,m2,m3,m4,m5 =n2,n4,n1,n3,n5
+                print(m1,m2,m3,m4,m5)
+            elif n5<n3: #n2 n4 n1 n5 n3
+                m1,m2,m3,m4,m5 =n2,n4,n1,n5,n3
+                print(m1,m2,m3,m4,m5)
+        elif n3<n1 and n3<n5: #n2 n4 n3
+            if n1<n5: #n2 n4 n3 n1 n5
+                m1,m2,m3,m4,m5 =n2,n4,n3,n1,n5
+                print(m1,m2,m3,m4,m5)
+            elif n5<n1: #n2 n4 n3 n5 n1
+                m1,m2,m3,m4,m5 =n2,n4,n3,n5,n1
+                print(m1,m2,m3,m4,m5)
+        elif n5<n1 and n5<n3: #n2 n4 n5
+            if n1<n3:#n2 n4 n5 n1 n3
+                m1,m2,m3,m4,m5 =n2,n4,n5,n1,n3
+                print(m1,m2,m3,m4,m5)
+            elif n3<n1: #n2 n4 n5 n3 n1
+                m1,m2,m3,m4,m5 =n2,n4,n5,n3,n1
+                print(m1,m2,m3,m4,m5)
+    elif n5<n1 and n5<n3 and n5<n4: #n2 n5
+        if n1<n3 and n1<n4: #n2 n5 n1
+            if n3<n4: #n2 n5 n1 n3 n4
+                m1,m2,m3,m4,m5 =n2,n5,n1,n3,n4
+                print(m1,m2,m3,m4,m5)
+            elif n4<n3: #n2 n5 n1 n4 n3
+                m1,m2,m3,m4,m5 =n2,n5,n1,n4,n3
+                print(m1,m2,m3,m4,m5)
+        elif n3<n1 and n3<n4: #n2 n5 n3
+            if n1<n4: #n2 n5 n3 n1 n4
+                m1,m2,m3,m4,m5 =n2,n5,n3,n1,n4
+                print(m1,m2,m3,m4,m5)
+            elif n4<n1: #n2 n5 n3 n4 n1
+                m1,m2,m3,m4,m5 =n2,n5,n3,n4,n1
+                print(m1,m2,m3,m4,m5)
+        elif n4<n1 and n4<n3: #n2 n5 n4
+            if n1<n3: #n2 n5 n4 n1 n3
+                m1,m2,m3,m4,m5 =n2,n5,n4,n1,n3
+                print(m1,m2,m3,m4,m5)
+            elif n3<n1: #n2 n5 n4 n3 n1
+                m1,m2,m3,m4,m5 =n2,n5,n4,n3,n1
+                print(m1,m2,m3,m4,m5)
+elif n3<n1 and n3<n2 and n3<n4 and n3<n5:#n3
+    if n1<n2 and n1<n4 and n1<n5: #n3 n1
+        if n2<n4 and n2<n5: #n3 n1 n2
+            if n4<n5: #n3 n1 n2 n4 n5
+                m1,m2,m3,m4,m5 =n3,n1,n2,n4,n5
+                print(m1,m2,m3,m4,m5)
+            elif n5<n4: #n3 n1 n2 n5 n4
+                m1,m2,m3,m4,m5 =n3,n1,n2,n5,n4
+                print(m1,m2,m3,m4,m5)
+        elif n4<n2 and n4<n5: #n3 n1 n4
+            if n2<n5: #n3 n1 n4 n2 n5
+                m1,m2,m3,m4,m5 =n3,n1,n4,n2,n5
+                print(m1,m2,m3,m4,m5)
+            elif n5<n2: #n3 n1 n4 n5 n2
+                m1,m2,m3,m4,m5 =n3,n1,n4,n5,n2
+                print(m1,m2,m3,m4,m5)
+        elif n5<n2 and n5<n4: #n3 n1 n5
+            if n2<n4: #n3 n1 n5 n2 n4
+                m1,m2,m3,m4,m5 =n3,n1,n5,n2,n4
+                print(m1,m2,m3,m4,m5)
+            elif n4<n2: #n3 n1 n5 n4 n2
+                m1,m2,m3,m4,m5 =n3,n1,n5,n4,n2
+                print(m1,m2,m3,m4,m5)
+    elif n2<n1 and n2<n4 and n2<n5: #n3 n2
+        if n1<n4 and n1<n5: #n3 n2 n1
+            if n4<n5: #n3 n2 n1 n4 n5
+                m1,m2,m3,m4,m5 =n3,n2,n1,n4,n5
+                print(m1,m2,m3,m4,m5)
+            elif n5<n4: #n3 n2 n1 n5 n4
+                m1,m2,m3,m4,m5 =n3,n2,n1,n5,n4
+                print(m1,m2,m3,m4,m5)
+        if n4<n1 and n4<n5: #n3 n2 n4
+            if n1<n5: #n3 n2 n4 n1 n5
+                m1,m2,m3,m4,m5 =n3,n2,n4,n1,n5
+                print(m1,m2,m3,m4,m5)
+            elif n5<n1: #n3 n2 n4 n5 n1
+                m1,m2,m3,m4,m5 =n3,n2,n4,n5,n1
+                print(m1,m2,m3,m4,m5)
+        if n5<n1 and n5<n4: #n3 n2 n5
+            if n1<n4: #n3 n2 n5 n1 n4
+                m1,m2,m3,m4,m5 =n3,n2,n5,n1,n4
+                print(m1,m2,m3,m4,m5)
+            elif n4<n1: #n3 n2 n5 n4 n1
+                m1,m2,m3,m4,m5 =n3,n2,n5,n4,n1
+                print(m1,m2,m3,m4,m5)
+    elif n4<n1 and n4<n2 and n4<n5: #n3 n4
+        if n1<n2 and n1<n5: #n3 n4 n1
+            if n2<n5: #n3 n4 n1 n2 n5
+                m1,m2,m3,m4,m5 =n3,n4,n1,n2,n5
+                print(m1,m2,m3,m4,m5)
+            elif n5<n2: #n3 n4 n1 n5 n2
+                m1,m2,m3,m4,m5 =n3,n4,n1,n5,n2
+                print(m1,m2,m3,m4,m5)
+        elif n2<n1 and n2<n5: #n3 n4 n2
+            if n1<n5: #n3 n4 n2 n1 n5
+                m1,m2,m3,m4,m5 =n3,n4,n2,n1,n5
+                print(m1,m2,m3,m4,m5)
+            elif n5<n1: #n3 n4 n2 n5 n1
+                m1,m2,m3,m4,m5 =n3,n4,n2,n5,n1
+                print(m1,m2,m3,m4,m5)
+        elif n5<n1 and n5<n2: #n3 n4 n5
+            if n1<n2: #n3 n4 n5 n1 n2
+                m1,m2,m3,m4,m5 =n3,n4,n5,n1,n2
+                print(m1,m2,m3,m4,m5)
+            elif n2<n1: #n3 n4 n5 n2 n1
+                m1,m2,m3,m4,m5 =n3,n4,n5,n2,n1
+                print(m1,m2,m3,m4,m5)
+    elif n5<n1 and n5<n2 and n5<n4: #n3 n5
+        if n1<n2 and n1<n4: #n3 n5 n1
+            if n2<n4: #n3 n5 n1 n2 n4
+                m1,m2,m3,m4,m5 =n3,n5,n1,n2,n4
+                print(m1,m2,m3,m4,m5)
+            elif n4<n2: #n3 n5 n1 n4 n2
+                m1,m2,m3,m4,m5 =n3,n5,n1,n4,n2
+                print(m1,m2,m3,m4,m5)
+        elif n2<n1 and n2<n4: #n3 n5 n2
+            if n1<n4: #n3 n5 n2 n1 n4
+                m1,m2,m3,m4,m5 =n3,n5,n2,n1,n4
+                print(m1,m2,m3,m4,m5)
+            elif n4<n1: #n3 n5 n2 n4 n1
+                m1,m2,m3,m4,m5 =n3,n5,n2,n4,n1
+                print(m1,m2,m3,m4,m5)
+        elif n4<n1 and n4<n2: #n3 n5 n4
+            if n1<n2: #n3 n5 n4 n1 n2
+                m1,m2,m3,m4,m5 =n3,n5,n4,n1,n2
+                print(m1,m2,m3,m4,m5)
+            elif n2<n1: #n3 n5 n4 n2 n1
+                m1,m2,m3,m4,m5 =n3,n5,n4,n2,n1
+                print(m1,m2,m3,m4,m5)
+elif n4<n1 and n4<n2 and n4<n3 and n4<n5:#n4
+    if n1<n2 and n1<n3 and n1<n5: #n4 n1
+        if n2<n3 and n2<n5: #n4 n1 n2
+            if n3<n5: #n4 n1 n2 n3 n5
+                m1,m2,m3,m4,m5 =n4,n1,n2,n3,n5
+                print(m1,m2,m3,m4,m5)
+            elif n5<n3: #n4 n1 n2 n5 n3
+                m1,m2,m3,m4,m5 =n4,n1,n2,n5,n3
+                print(m1,m2,m3,m4,m5)
+        elif n3<n2 and n3<n5: #n4 n1 n3
+            if n2<n5: #n4 n1 n3 n2 n5
+                m1,m2,m3,m4,m5 =n4,n1,n3,n2,n5
+                print(m1,m2,m3,m4,m5)
+            elif n5<n2: #n4 n1 n3 n5 n2
+                m1,m2,m3,m4,m5 =n4,n1,n3,n5,n2
+                print(m1,m2,m3,m4,m5)
+        elif n5<n2 and n5<n3: #n4 n1 n5
+            if n2<n3: #n4 n1 n5 n2 n3
+                m1,m2,m3,m4,m5 =n4,n1,n5,n2,n3
+                print(m1,m2,m3,m4,m5)
+            elif n3<n2: #n4 n1 n5 n3 n2
+                m1,m2,m3,m4,m5 =n4,n1,n5,n3,n2
+                print(m1,m2,m3,m4,m5)
+    elif n2<n1 and n2<n3 and n2<n5: #n4 n2
+        if n1<n3 and n1<n5: #n4 n2 n1
+            if n3<n5: #n4 n2 n1 n3 n5
+                m1,m2,m3,m4,m5 =n4,n2,n1,n3,n5
+                print(m1,m2,m3,m4,m5)
+            elif n5<n3: #n4 n2 n1 n5 n3
+                m1,m2,m3,m4,m5 =n4,n2,n1,n5,n3
+                print(m1,m2,m3,m4,m5)
+        elif n3<n1 and n3<n5: #n4 n2 n3
+            if n1<n5: #n4 n2 n3 n1 n5
+                m1,m2,m3,m4,m5 =n4,n2,n3,n1,n5
+                print(m1,m2,m3,m4,m5)
+            elif n5<n1: #n4 n2 n3 n5 n1
+                m1,m2,m3,m4,m5 =n4,n2,n3,n5,n1
+                print(m1,m2,m3,m4,m5)
+        elif n5<n1 and n5<n3: #n4 n2 n5
+            if n1<n3: #n4 n2 n5 n1 n3
+                m1,m2,m3,m4,m5 =n4,n2,n5,n1,n3
+                print(m1,m2,m3,m4,m5)
+            elif n3<n1: #n4 n2 n5 n3 n1
+                m1,m2,m3,m4,m5 =n4,n2,n5,n3,n1
+                print(m1,m2,m3,m4,m5)
+    elif n3<n1 and n3<n2 and n3<n5: #n4 n3
+        if n1<n2 and n1<n5: #n4 n3 n1
+            if n2<n5: #n4 n3 n1 n2 n5
+                m1,m2,m3,m4,m5 =n4,n3,n1,n2,n5
+                print(m1,m2,m3,m4,m5)
+            elif n5<n2: #n4 n3 n1 n5 n2
+                m1,m2,m3,m4,m5 =n4,n3,n1,n5,n2
+                print(m1,m2,m3,m4,m5)
+        elif n2<n1 and n2<n5: #n4 n3 n2
+            if n1<n5: #n4 n3 n2 n1 n5
+                m1,m2,m3,m4,m5 =n4,n3,n2,n1,n5
+                print(m1,m2,m3,m4,m5)
+            elif n5<n1: #n4 n3 n2 n5 n1
+                m1,m2,m3,m4,m5 =n4,n3,n2,n5,n1
+                print(m1,m2,m3,m4,m5)
+        elif n5<n1 and n5<n2: #n4 n3 n5
+            if n1<n2: #n4 n3 n5 n1 n2
+                m1,m2,m3,m4,m5 =n4,n3,n5,n1,n2
+                print(m1,m2,m3,m4,m5)
+            elif n2<n1: #n4 n3 n5 n2 n1
+                m1,m2,m3,m4,m5 =n4,n3,n5,n2,n1
+                print(m1,m2,m3,m4,m5)
+    elif n5<n1 and n5<n2 and n5<n3: #n4 n5
+        if n1<n2 and n1<n3: #n4 n5 n1
+            if n2<n3: #n4 n5 n1 n2 n3
+                m1,m2,m3,m4,m5 =n4,n5,n1,n2,n3
+                print(m1,m2,m3,m4,m5)
+            elif n3<n2: #n4 n5 n1 n3 n2
+                m1,m2,m3,m4,m5 =n4,n5,n1,n3,n2
+                print(m1,m2,m3,m4,m5)
+        elif n2<n1 and n2<n3: #n4 n5 n2
+            if n1<n3: #n4 n5 n2 n1 n3
+                m1,m2,m3,m4,m5 =n4,n5,n2,n1,n3
+                print(m1,m2,m3,m4,m5)
+            elif n3<n1: #n4 n5 n2 n3 n1
+                m1,m2,m3,m4,m5 =n4,n5,n2,n3,n1
+                print(m1,m2,m3,m4,m5)
+        elif n3<n1 and n3<n2: #n4 n5 n3
+            if n1<n2: #n4 n5 n3 n1 n2
+                m1,m2,m3,m4,m5 =n4,n5,n3,n1,n2
+                print(m1,m2,m3,m4,m5)
+            elif n2<n1: #n4 n5 n3 n2 n1
+                m1,m2,m3,m4,m5 =n4,n5,n3,n2,n1
+                print(m1,m2,m3,m4,m5)
+elif n5<n1 and n5<n2 and n5<n3 and n5<n4: #n5
+    if n1<n2 and n1<n3 and n1<n4: #n5 n1
+        if n2<n3 and n2<n4: #n5 n1 n2
+            if n3<n4: #n5 n1 n2 n3 n4
+                m1,m2,m3,m4,m5 =n5,n1,n2,n3,n4
+                print(m1,m2,m3,m4,m5)
+            elif n4<n3: #n5 n1 n2 n4 n3
+                m1,m2,m3,m4,m5 =n5,n1,n2,n4,n3
+                print(m1,m2,m3,m4,m5)
+        elif n3<n2 and n3<n4: #n5 n1 n3
+            if n2<n4: #n5 n1 n3 n2 n4
+                m1,m2,m3,m4,m5 =n5,n1,n3,n2,n4
+                print(m1,m2,m3,m4,m5)
+            elif n4<n2: #n5 n1 n3 n4 n2
+                m1,m2,m3,m4,m5 =n5,n1,n3,n4,n2
+                print(m1,m2,m3,m4,m5)
+        elif n4<n2 and n4<n3: #n5 n1 n4
+            if n2<n3: #n5 n1 n4 n2 n3
+                m1,m2,m3,m4,m5 =n5,n1,n4,n2,n3
+                print(m1,m2,m3,m4,m5)
+            elif n3<n2: #n5 n1 n4 n3 n2
+                m1,m2,m3,m4,m5 =n5,n1,n4,n3,n2
+                print(m1,m2,m3,m4,m5)
+    elif n2<n1 and n2<n3 and n2<n4: #n5 n2
+        if n1<n3 and n1<n4:#n5 n2 n1
+            if n3<n4: #n5 n2 n1 n3 n4
+                m1,m2,m3,m4,m5 =n5,n2,n1,n3,n4
+                print(m1,m2,m3,m4,m5)
+            elif n4<n3: #n5 n2 n1 n4 n3
+                m1,m2,m3,m4,m5 =n5,n2,n1,n4,n3
+                print(m1,m2,m3,m4,m5)
+        elif n3<n1 and n3<n4: #n5 n2 n3
+            if n1<n4: #n5 n2 n3 n1 n4
+                m1,m2,m3,m4,m5 =n5,n2,n3,n1,n4
+                print(m1,m2,m3,m4,m5)
+            elif n4<n1: #n5 n2 n3 n4 n1
+                m1,m2,m3,m4,m5 =n5,n2,n3,n4,n1
+                print(m1,m2,m3,m4,m5)
+        elif n4<n1 and n4<n3: #n5 n2 n4
+            if n1<n3: #n5 n2 n4 n1 n3
+                m1,m2,m3,m4,m5 =n5,n2,n4,n1,n3
+                print(m1,m2,m3,m4,m5)
+            elif n3<n1: #n5 n2 n4 n3 n1
+                m1,m2,m3,m4,m5 =n5,n2,n4,n3,n1
+                print(m1,m2,m3,m4,m5)
+    elif n3<n1 and n3<n2 and n3<n4: #n5 n3
+        if n1<n2 and n1<n4: #n5 n3 n1
+            if n2<n4: #n5 n3 n1 n2 n4
+                m1,m2,m3,m4,m5 =n5,n3,n1,n2,n4
+                print(m1,m2,m3,m4,m5)
+            elif n4<n2: #n5 n3 n1 n4 n2
+                m1,m2,m3,m4,m5 =n5,n3,n1,n4,n2
+                print(m1,m2,m3,m4,m5)
+        elif n2<n1 and n2<n4: #n5 n3 n2
+            if n1<n4: #n5 n3 n2 n1 n4
+                m1,m2,m3,m4,m5 =n5,n3,n2,n1,n4
+                print(m1,m2,m3,m4,m5)
+            elif n4<n1: #n5 n3 n2 n4 n1
+                m1,m2,m3,m4,m5 =n5,n3,n2,n4,n1
+                print(m1,m2,m3,m4,m5)
+        elif n4<n1 and n4<n2: #n5 n3 n4
+            if n1<n2: #n5 n3 n4 n1 n2
+                m1,m2,m3,m4,m5 =n5,n3,n4,n1,n2
+                print(m1,m2,m3,m4,m5)
+            elif n2<n1: #n5 n3 n4 n2 n1
+                m1,m2,m3,m4,m5 =n5,n3,n4,n2,n1
+                print(m1,m2,m3,m4,m5)
+    elif n4<n1 and n4<n2 and n4<n3: #n5 n4
+        if n1<n2 and n1<n3: #n5 n4 n1
+            if n2<n3: #n5 n4 n1 n2 n3
+                m1,m2,m3,m4,m5 =n5,n4,n1,n2,n3
+                print(m1,m2,m3,m4,m5)
+            elif n3<n2: #n5 n4 n1 n3 n2
+                m1,m2,m3,m4,m5 =n5,n4,n1,n3,n2
+                print(m1,m2,m3,m4,m5)
+        elif n2<n1 and n2<n3: #n5 n4 n2
+            if n1<n3: #n5 n4 n2 n1 n3
+                m1,m2,m3,m4,m5 =n5,n4,n2,n1,n3
+                print(m1,m2,m3,m4,m5)
+            elif n3<n1: #n5 n4 n2 n3 n1
+                m1,m2,m3,m4,m5 =n5,n4,n2,n3,n1
+                print(m1,m2,m3,m4,m5)
+        elif n3<n1 and n3<n2: #n5 n4 n3
+            if n1<n2: #n5 n4 n3 n1 n2
+                m1,m2,m3,m4,m5 =n5,n4,n3,n1,n2
+                print(m1,m2,m3,m4,m5)
+            elif n2<n1: #n5 n4 n3 n2 n1
+                m1,m2,m3,m4,m5 =n5,n4,n3,n2,n1
+                print(m1,m2,m3,m4,m5)
+
+
+
+
+print("2) La mediana de los numeros dados es el número de la mitad ",m3)
+
+
+#El promedio multiplicativo (multilplica todos y luego calcula la raíz de la cantidad de operandos)
+
+
 prom_mul = (n1*n2*n3*n4*n5)**5
 print("3) El promedio multiplicativo de los números dados es: ",prom_mul)
+
+
 #Ordenar los números de forma ascendente
-print("4) Los números organizados de menor a mayor se ve de la siguiente manera: ",num())
+
+
+print("4) Los números organizados de menor a mayor se ve de la siguiente manera: ")
+if n1<n2 and n1<n3 and n1<n4 and n1<n5: #n1
+    if n2<n3 and n2<n4 and n2<n5: #n1 n2
+        if n3<n4 and n3<n5: #n1 n2 n3
+            if n4<n5: #n1 n2 n3 n4
+                m1,m2,m3,m4,m5 =n1,n2,n3,n4,n5 #n1 n2 n3 n4 n5
+                print(m1,m2,m3,m4,m5)
+            elif n5<n4: #n1 n2 n3 n5
+                m1,m2,m3,m4,m5 =n1,n2,n3,n5,n4 #n1 n2 n3 n5 n4
+                print(m1,m2,m3,m4,m5)
+        elif n4<n3 and n4<n5: #n1 n2 n4
+            if n3<n5: #n1 n2 n4 n3 n5
+                m1,m2,m3,m4,m5 =n1,n2,n4,n3,n5
+                print(m1,m2,m3,m4,m5)
+            elif n5<n3: #n1 n2 n4 n5 n3
+                m1,m2,m3,m4,m5 =n1,n2,n4,n5,n3
+                print(m1,m2,m3,m4,m5)
+        elif n5<n3 and n5<n4: #n1 n2 n5
+            if n3<n4: #n1 n2 n5 n3 n4
+                m1,m2,m3,m4,m5 =n1,n2,n5,n3,n4
+                print(m1,m2,m3,m4,m5)
+            elif n4<n3: #n1 n2 n5 n4 n3
+                m1,m2,m3,m4,m5 =n1,n2,n5,n4,n3
+                print(m1,m2,m3,m4,m5)
+    elif n3<n2 and n3<n4 and n3<n5: #n1 n3
+        if n2<n4 and n2<n5: #n1 n3 n2
+            if n4<n5: #n1 n3 n2 n4 n5
+                m1,m2,m3,m4,m5 =n1,n3,n2,n4,n5
+                print(m1,m2,m3,m4,m5)
+            elif n5<n4: #n1 n3 n2 n5 n4
+                m1,m2,m3,m4,m5 =n1,n3,n2,n5,n4
+                print(m1,m2,m3,m4,m5)
+        elif n4<n2 and n4<n5: #n1 n3 n4
+            if n2<n5: #n1 n3 n4 n2 n5
+                m1,m2,m3,m4,m5 =n1,n3,n4,n2,n5
+                print(m1,m2,m3,m4,m5)
+            elif n5<n2: #n1 n3 n4 n5 n2
+                m1,m2,m3,m4,m5 =n1,n3,n4,n5,n2
+                print(m1,m2,m3,m4,m5)
+        elif n5<n2 and n5<n4: #n1 n3 n5
+            if n2<n4: #n1 n3 n5 n2 n4
+                m1,m2,m3,m4,m5 =n1,n3,n5,n2,n4
+                print(m1,m2,m3,m4,m5)
+            elif n4<n2: #n1 n3 n5 n4 n2
+                m1,m2,m3,m4,m5 =n1,n3,n5,n4,n2
+                print(m1,m2,m3,m4,m5)
+    elif n4<n2 and n4<n3 and n4<n5: #n1 n4
+        if n2<n3 and n2<n5: #n1 n4 n2
+            if n3<n5: #n1 n4 n2 n3 n5
+                m1,m2,m3,m4,m5 =n1,n4,n2,n3,n5
+                print(m1,m2,m3,m4,m5)
+            elif n5<n3: #n1 n4 n2 n5 n3
+                m1,m2,m3,m4,m5 =n1,n4,n2,n5,n3
+                print(m1,m2,m3,m4,m5)
+        elif n3<n2 and n3<n5: #n1 n4 n3
+            if n2<n5:#n1 n4 n3 n2 n5
+                m1,m2,m3,m4,m5 =n1,n4,n3,n2,n5
+                print(m1,m2,m3,m4,m5)
+            elif n5<n2: #n1 n4 n3 n5 n2
+                m1,m2,m3,m4,m5 =n1,n4,n3,n5,n2
+                print(m1,m2,m3,m4,m5)
+        elif n5<n2 and n5<n3: #n1 n4 n5
+            if n2<n3: #n1 n4 n5 n2 n3
+                m1,m2,m3,m4,m5 =n1,n4,n5,n2,n3
+                print(m1,m2,m3,m4,m5)
+            elif n3<n2: #n1 n4 n5 n3 n2
+                m1,m2,m3,m4,m5 =n1,n4,n5,n3,n2
+                print(m1,m2,m3,m4,m5)
+    elif n5<n2 and n5<n3 and n5<n4: #n1 n5
+        if n2<n3 and n2<n4: #n1 n5 n2
+            if n3<n4: #n1 n5 n2 n3 n4
+                m1,m2,m3,m4,m5 =n1,n5,n2,n3,n4
+                print(m1,m2,m3,m4,m5)
+            elif n4<n3: #n1 n5 n2 n4 n3
+                m1,m2,m3,m4,m5 =n1,n5,n2,n4,n3
+                print(m1,m2,m3,m4,m5)
+        elif n3<n2 and n3<n4: #n1 n5 n3
+            if n2<n4:#n1 n5 n3 n2 n4
+                m1,m2,m3,m4,m5 =n1,n5,n3,n2,n4
+                print(m1,m2,m3,m4,m5)
+            elif n4<n2: #n1 n5 n3 n4 n2
+                m1,m2,m3,m4,m5 =n1,n5,n3,n4,n2
+                print(m1,m2,m3,m4,m5)
+        elif n4<n2 and n4<n3: #n1 n5 n4
+            if n2<n3:#n1 n5 n4 n2 n3
+                m1,m2,m3,m4,m5 =n1,n5,n4,n2,n3
+                print(m1,m2,m3,m4,m5)
+            elif n3<n2:#n1 n5 n4 n3 n2
+                m1,m2,m3,m4,m5 =n1,n5,n4,n3,n2
+                print(m1,m2,m3,m4,m5)
+elif n2<n1 and n2<n3 and n2<n4 and n2<n5: #n2
+    if n1<n3 and n1<n4 and n1<n5: #n2 n1
+        if n3<n4 and n3<n5: #n2 n1 n3
+            if n4<n5: #n2 n1 n3 n4 n5
+                m1,m2,m3,m4,m5 =n2,n1,n3,n4,n5
+                print(m1,m2,m3,m4,m5)
+            elif n5<n4: #n2 n1 n3 n5 n4
+                m1,m2,m3,m4,m5 =n2,n1,n3,n5,n4
+                print(m1,m2,m3,m4,m5)
+        elif n4<n3 and n4<n5: #n2 n1 n4
+            if n3<n5: #n2 n1 n4 n3 n5
+                m1,m2,m3,m4,m5 =n2,n1,n4,n3,n5
+                print(m1,m2,m3,m4,m5)
+            elif n5<n3: #n2 n1 n4 n5 n3
+                m1,m2,m3,m4,m5 =n2,n1,n4,n5,n3
+                print(m1,m2,m3,m4,m5)
+        elif n5<n3 and n5<n4: #n2 n1 n5
+            if n3<n4: #n2 n1 5n n3 n4
+                m1,m2,m3,m4,m5 =n2,n1,n5,n3,n4
+                print(m1,m2,m3,m4,m5)
+            elif n4<n3: #n2 n1 n5 n4 n3
+                m1,m2,m3,m4,m5 =n2,n1,n5,n4,n3
+                print(m1,m2,m3,m4,m5)
+    elif n3<n1 and n3<n4 and n3<n5: #n2 n3
+        if n1<n4 and n1<n5: #n2 n3 n1
+            if n4<n5: #n2 n3 n1 n4 n5
+                m1,m2,m3,m4,m5 =n2,n3,n1,n4,n5
+                print(m1,m2,m3,m4,m5)
+            elif n5<n4: #n2 n3 n1 n5 n4
+                m1,m2,m3,m4,m5 =n2,n3,n1,n5,n4
+                print(m1,m2,m3,m4,m5)
+        elif n4<n1 and n4<n5: #n2 n3 n4
+            if n1<n5: #n2 n3 n4 n1 n5
+                m1,m2,m3,m4,m5 =n2,n3,n4,n1,n5
+                print(m1,m2,m3,m4,m5)
+            elif n5<n1: #n2 n3 n4 n5 n1
+                m1,m2,m3,m4,m5 =n2,n3,n4,n5,n1
+                print(m1,m2,m3,m4,m5)
+        elif n5<n1 and n5<n4: #n2 n3 n5
+            if n1<n4: #n2 n3 n5 n1 n4
+                m1,m2,m3,m4,m5 =n2,n3,n5,n1,n4
+                print(m1,m2,m3,m4,m5)
+            elif n4<n1: #n2 n3 n5 n4 n1
+                m1,m2,m3,m4,m5 =n2,n3,n5,n4,n1
+                print(m1,m2,m3,m4,m5)
+    elif n4<n1 and n4<n3 and n4<n5: #n2 n4
+        if n1<n3 and n1<n5:#n2 n4 n1
+            if n3<n5: #n2 n4 n1 n3 n5
+                m1,m2,m3,m4,m5 =n2,n4,n1,n3,n5
+                print(m1,m2,m3,m4,m5)
+            elif n5<n3: #n2 n4 n1 n5 n3
+                m1,m2,m3,m4,m5 =n2,n4,n1,n5,n3
+                print(m1,m2,m3,m4,m5)
+        elif n3<n1 and n3<n5: #n2 n4 n3
+            if n1<n5: #n2 n4 n3 n1 n5
+                m1,m2,m3,m4,m5 =n2,n4,n3,n1,n5
+                print(m1,m2,m3,m4,m5)
+            elif n5<n1: #n2 n4 n3 n5 n1
+                m1,m2,m3,m4,m5 =n2,n4,n3,n5,n1
+                print(m1,m2,m3,m4,m5)
+        elif n5<n1 and n5<n3: #n2 n4 n5
+            if n1<n3:#n2 n4 n5 n1 n3
+                m1,m2,m3,m4,m5 =n2,n4,n5,n1,n3
+                print(m1,m2,m3,m4,m5)
+            elif n3<n1: #n2 n4 n5 n3 n1
+                m1,m2,m3,m4,m5 =n2,n4,n5,n3,n1
+                print(m1,m2,m3,m4,m5)
+    elif n5<n1 and n5<n3 and n5<n4: #n2 n5
+        if n1<n3 and n1<n4: #n2 n5 n1
+            if n3<n4: #n2 n5 n1 n3 n4
+                m1,m2,m3,m4,m5 =n2,n5,n1,n3,n4
+                print(m1,m2,m3,m4,m5)
+            elif n4<n3: #n2 n5 n1 n4 n3
+                m1,m2,m3,m4,m5 =n2,n5,n1,n4,n3
+                print(m1,m2,m3,m4,m5)
+        elif n3<n1 and n3<n4: #n2 n5 n3
+            if n1<n4: #n2 n5 n3 n1 n4
+                m1,m2,m3,m4,m5 =n2,n5,n3,n1,n4
+                print(m1,m2,m3,m4,m5)
+            elif n4<n1: #n2 n5 n3 n4 n1
+                m1,m2,m3,m4,m5 =n2,n5,n3,n4,n1
+                print(m1,m2,m3,m4,m5)
+        elif n4<n1 and n4<n3: #n2 n5 n4
+            if n1<n3: #n2 n5 n4 n1 n3
+                m1,m2,m3,m4,m5 =n2,n5,n4,n1,n3
+                print(m1,m2,m3,m4,m5)
+            elif n3<n1: #n2 n5 n4 n3 n1
+                m1,m2,m3,m4,m5 =n2,n5,n4,n3,n1
+                print(m1,m2,m3,m4,m5)
+elif n3<n1 and n3<n2 and n3<n4 and n3<n5:#n3
+    if n1<n2 and n1<n4 and n1<n5: #n3 n1
+        if n2<n4 and n2<n5: #n3 n1 n2
+            if n4<n5: #n3 n1 n2 n4 n5
+                m1,m2,m3,m4,m5 =n3,n1,n2,n4,n5
+                print(m1,m2,m3,m4,m5)
+            elif n5<n4: #n3 n1 n2 n5 n4
+                m1,m2,m3,m4,m5 =n3,n1,n2,n5,n4
+                print(m1,m2,m3,m4,m5)
+        elif n4<n2 and n4<n5: #n3 n1 n4
+            if n2<n5: #n3 n1 n4 n2 n5
+                m1,m2,m3,m4,m5 =n3,n1,n4,n2,n5
+                print(m1,m2,m3,m4,m5)
+            elif n5<n2: #n3 n1 n4 n5 n2
+                m1,m2,m3,m4,m5 =n3,n1,n4,n5,n2
+                print(m1,m2,m3,m4,m5)
+        elif n5<n2 and n5<n4: #n3 n1 n5
+            if n2<n4: #n3 n1 n5 n2 n4
+                m1,m2,m3,m4,m5 =n3,n1,n5,n2,n4
+                print(m1,m2,m3,m4,m5)
+            elif n4<n2: #n3 n1 n5 n4 n2
+                m1,m2,m3,m4,m5 =n3,n1,n5,n4,n2
+                print(m1,m2,m3,m4,m5)
+    elif n2<n1 and n2<n4 and n2<n5: #n3 n2
+        if n1<n4 and n1<n5: #n3 n2 n1
+            if n4<n5: #n3 n2 n1 n4 n5
+                m1,m2,m3,m4,m5 =n3,n2,n1,n4,n5
+                print(m1,m2,m3,m4,m5)
+            elif n5<n4: #n3 n2 n1 n5 n4
+                m1,m2,m3,m4,m5 =n3,n2,n1,n5,n4
+                print(m1,m2,m3,m4,m5)
+        if n4<n1 and n4<n5: #n3 n2 n4
+            if n1<n5: #n3 n2 n4 n1 n5
+                m1,m2,m3,m4,m5 =n3,n2,n4,n1,n5
+                print(m1,m2,m3,m4,m5)
+            elif n5<n1: #n3 n2 n4 n5 n1
+                m1,m2,m3,m4,m5 =n3,n2,n4,n5,n1
+                print(m1,m2,m3,m4,m5)
+        if n5<n1 and n5<n4: #n3 n2 n5
+            if n1<n4: #n3 n2 n5 n1 n4
+                m1,m2,m3,m4,m5 =n3,n2,n5,n1,n4
+                print(m1,m2,m3,m4,m5)
+            elif n4<n1: #n3 n2 n5 n4 n1
+                m1,m2,m3,m4,m5 =n3,n2,n5,n4,n1
+                print(m1,m2,m3,m4,m5)
+    elif n4<n1 and n4<n2 and n4<n5: #n3 n4
+        if n1<n2 and n1<n5: #n3 n4 n1
+            if n2<n5: #n3 n4 n1 n2 n5
+                m1,m2,m3,m4,m5 =n3,n4,n1,n2,n5
+                print(m1,m2,m3,m4,m5)
+            elif n5<n2: #n3 n4 n1 n5 n2
+                m1,m2,m3,m4,m5 =n3,n4,n1,n5,n2
+                print(m1,m2,m3,m4,m5)
+        elif n2<n1 and n2<n5: #n3 n4 n2
+            if n1<n5: #n3 n4 n2 n1 n5
+                m1,m2,m3,m4,m5 =n3,n4,n2,n1,n5
+                print(m1,m2,m3,m4,m5)
+            elif n5<n1: #n3 n4 n2 n5 n1
+                m1,m2,m3,m4,m5 =n3,n4,n2,n5,n1
+                print(m1,m2,m3,m4,m5)
+        elif n5<n1 and n5<n2: #n3 n4 n5
+            if n1<n2: #n3 n4 n5 n1 n2
+                m1,m2,m3,m4,m5 =n3,n4,n5,n1,n2
+                print(m1,m2,m3,m4,m5)
+            elif n2<n1: #n3 n4 n5 n2 n1
+                m1,m2,m3,m4,m5 =n3,n4,n5,n2,n1
+                print(m1,m2,m3,m4,m5)
+    elif n5<n1 and n5<n2 and n5<n4: #n3 n5
+        if n1<n2 and n1<n4: #n3 n5 n1
+            if n2<n4: #n3 n5 n1 n2 n4
+                m1,m2,m3,m4,m5 =n3,n5,n1,n2,n4
+                print(m1,m2,m3,m4,m5)
+            elif n4<n2: #n3 n5 n1 n4 n2
+                m1,m2,m3,m4,m5 =n3,n5,n1,n4,n2
+                print(m1,m2,m3,m4,m5)
+        elif n2<n1 and n2<n4: #n3 n5 n2
+            if n1<n4: #n3 n5 n2 n1 n4
+                m1,m2,m3,m4,m5 =n3,n5,n2,n1,n4
+                print(m1,m2,m3,m4,m5)
+            elif n4<n1: #n3 n5 n2 n4 n1
+                m1,m2,m3,m4,m5 =n3,n5,n2,n4,n1
+                print(m1,m2,m3,m4,m5)
+        elif n4<n1 and n4<n2: #n3 n5 n4
+            if n1<n2: #n3 n5 n4 n1 n2
+                m1,m2,m3,m4,m5 =n3,n5,n4,n1,n2
+                print(m1,m2,m3,m4,m5)
+            elif n2<n1: #n3 n5 n4 n2 n1
+                m1,m2,m3,m4,m5 =n3,n5,n4,n2,n1
+                print(m1,m2,m3,m4,m5)
+elif n4<n1 and n4<n2 and n4<n3 and n4<n5:#n4
+    if n1<n2 and n1<n3 and n1<n5: #n4 n1
+        if n2<n3 and n2<n5: #n4 n1 n2
+            if n3<n5: #n4 n1 n2 n3 n5
+                m1,m2,m3,m4,m5 =n4,n1,n2,n3,n5
+                print(m1,m2,m3,m4,m5)
+            elif n5<n3: #n4 n1 n2 n5 n3
+                m1,m2,m3,m4,m5 =n4,n1,n2,n5,n3
+                print(m1,m2,m3,m4,m5)
+        elif n3<n2 and n3<n5: #n4 n1 n3
+            if n2<n5: #n4 n1 n3 n2 n5
+                m1,m2,m3,m4,m5 =n4,n1,n3,n2,n5
+                print(m1,m2,m3,m4,m5)
+            elif n5<n2: #n4 n1 n3 n5 n2
+                m1,m2,m3,m4,m5 =n4,n1,n3,n5,n2
+                print(m1,m2,m3,m4,m5)
+        elif n5<n2 and n5<n3: #n4 n1 n5
+            if n2<n3: #n4 n1 n5 n2 n3
+                m1,m2,m3,m4,m5 =n4,n1,n5,n2,n3
+                print(m1,m2,m3,m4,m5)
+            elif n3<n2: #n4 n1 n5 n3 n2
+                m1,m2,m3,m4,m5 =n4,n1,n5,n3,n2
+                print(m1,m2,m3,m4,m5)
+    elif n2<n1 and n2<n3 and n2<n5: #n4 n2
+        if n1<n3 and n1<n5: #n4 n2 n1
+            if n3<n5: #n4 n2 n1 n3 n5
+                m1,m2,m3,m4,m5 =n4,n2,n1,n3,n5
+                print(m1,m2,m3,m4,m5)
+            elif n5<n3: #n4 n2 n1 n5 n3
+                m1,m2,m3,m4,m5 =n4,n2,n1,n5,n3
+                print(m1,m2,m3,m4,m5)
+        elif n3<n1 and n3<n5: #n4 n2 n3
+            if n1<n5: #n4 n2 n3 n1 n5
+                m1,m2,m3,m4,m5 =n4,n2,n3,n1,n5
+                print(m1,m2,m3,m4,m5)
+            elif n5<n1: #n4 n2 n3 n5 n1
+                m1,m2,m3,m4,m5 =n4,n2,n3,n5,n1
+                print(m1,m2,m3,m4,m5)
+        elif n5<n1 and n5<n3: #n4 n2 n5
+            if n1<n3: #n4 n2 n5 n1 n3
+                m1,m2,m3,m4,m5 =n4,n2,n5,n1,n3
+                print(m1,m2,m3,m4,m5)
+            elif n3<n1: #n4 n2 n5 n3 n1
+                m1,m2,m3,m4,m5 =n4,n2,n5,n3,n1
+                print(m1,m2,m3,m4,m5)
+    elif n3<n1 and n3<n2 and n3<n5: #n4 n3
+        if n1<n2 and n1<n5: #n4 n3 n1
+            if n2<n5: #n4 n3 n1 n2 n5
+                m1,m2,m3,m4,m5 =n4,n3,n1,n2,n5
+                print(m1,m2,m3,m4,m5)
+            elif n5<n2: #n4 n3 n1 n5 n2
+                m1,m2,m3,m4,m5 =n4,n3,n1,n5,n2
+                print(m1,m2,m3,m4,m5)
+        elif n2<n1 and n2<n5: #n4 n3 n2
+            if n1<n5: #n4 n3 n2 n1 n5
+                m1,m2,m3,m4,m5 =n4,n3,n2,n1,n5
+                print(m1,m2,m3,m4,m5)
+            elif n5<n1: #n4 n3 n2 n5 n1
+                m1,m2,m3,m4,m5 =n4,n3,n2,n5,n1
+                print(m1,m2,m3,m4,m5)
+        elif n5<n1 and n5<n2: #n4 n3 n5
+            if n1<n2: #n4 n3 n5 n1 n2
+                m1,m2,m3,m4,m5 =n4,n3,n5,n1,n2
+                print(m1,m2,m3,m4,m5)
+            elif n2<n1: #n4 n3 n5 n2 n1
+                m1,m2,m3,m4,m5 =n4,n3,n5,n2,n1
+                print(m1,m2,m3,m4,m5)
+    elif n5<n1 and n5<n2 and n5<n3: #n4 n5
+        if n1<n2 and n1<n3: #n4 n5 n1
+            if n2<n3: #n4 n5 n1 n2 n3
+                m1,m2,m3,m4,m5 =n4,n5,n1,n2,n3
+                print(m1,m2,m3,m4,m5)
+            elif n3<n2: #n4 n5 n1 n3 n2
+                m1,m2,m3,m4,m5 =n4,n5,n1,n3,n2
+                print(m1,m2,m3,m4,m5)
+        elif n2<n1 and n2<n3: #n4 n5 n2
+            if n1<n3: #n4 n5 n2 n1 n3
+                m1,m2,m3,m4,m5 =n4,n5,n2,n1,n3
+                print(m1,m2,m3,m4,m5)
+            elif n3<n1: #n4 n5 n2 n3 n1
+                m1,m2,m3,m4,m5 =n4,n5,n2,n3,n1
+                print(m1,m2,m3,m4,m5)
+        elif n3<n1 and n3<n2: #n4 n5 n3
+            if n1<n2: #n4 n5 n3 n1 n2
+                m1,m2,m3,m4,m5 =n4,n5,n3,n1,n2
+                print(m1,m2,m3,m4,m5)
+            elif n2<n1: #n4 n5 n3 n2 n1
+                m1,m2,m3,m4,m5 =n4,n5,n3,n2,n1
+                print(m1,m2,m3,m4,m5)
+elif n5<n1 and n5<n2 and n5<n3 and n5<n4: #n5
+    if n1<n2 and n1<n3 and n1<n4: #n5 n1
+        if n2<n3 and n2<n4: #n5 n1 n2
+            if n3<n4: #n5 n1 n2 n3 n4
+                m1,m2,m3,m4,m5 =n5,n1,n2,n3,n4
+                print(m1,m2,m3,m4,m5)
+            elif n4<n3: #n5 n1 n2 n4 n3
+                m1,m2,m3,m4,m5 =n5,n1,n2,n4,n3
+                print(m1,m2,m3,m4,m5)
+        elif n3<n2 and n3<n4: #n5 n1 n3
+            if n2<n4: #n5 n1 n3 n2 n4
+                m1,m2,m3,m4,m5 =n5,n1,n3,n2,n4
+                print(m1,m2,m3,m4,m5)
+            elif n4<n2: #n5 n1 n3 n4 n2
+                m1,m2,m3,m4,m5 =n5,n1,n3,n4,n2
+                print(m1,m2,m3,m4,m5)
+        elif n4<n2 and n4<n3: #n5 n1 n4
+            if n2<n3: #n5 n1 n4 n2 n3
+                m1,m2,m3,m4,m5 =n5,n1,n4,n2,n3
+                print(m1,m2,m3,m4,m5)
+            elif n3<n2: #n5 n1 n4 n3 n2
+                m1,m2,m3,m4,m5 =n5,n1,n4,n3,n2
+                print(m1,m2,m3,m4,m5)
+    elif n2<n1 and n2<n3 and n2<n4: #n5 n2
+        if n1<n3 and n1<n4:#n5 n2 n1
+            if n3<n4: #n5 n2 n1 n3 n4
+                m1,m2,m3,m4,m5 =n5,n2,n1,n3,n4
+                print(m1,m2,m3,m4,m5)
+            elif n4<n3: #n5 n2 n1 n4 n3
+                m1,m2,m3,m4,m5 =n5,n2,n1,n4,n3
+                print(m1,m2,m3,m4,m5)
+        elif n3<n1 and n3<n4: #n5 n2 n3
+            if n1<n4: #n5 n2 n3 n1 n4
+                m1,m2,m3,m4,m5 =n5,n2,n3,n1,n4
+                print(m1,m2,m3,m4,m5)
+            elif n4<n1: #n5 n2 n3 n4 n1
+                m1,m2,m3,m4,m5 =n5,n2,n3,n4,n1
+                print(m1,m2,m3,m4,m5)
+        elif n4<n1 and n4<n3: #n5 n2 n4
+            if n1<n3: #n5 n2 n4 n1 n3
+                m1,m2,m3,m4,m5 =n5,n2,n4,n1,n3
+                print(m1,m2,m3,m4,m5)
+            elif n3<n1: #n5 n2 n4 n3 n1
+                m1,m2,m3,m4,m5 =n5,n2,n4,n3,n1
+                print(m1,m2,m3,m4,m5)
+    elif n3<n1 and n3<n2 and n3<n4: #n5 n3
+        if n1<n2 and n1<n4: #n5 n3 n1
+            if n2<n4: #n5 n3 n1 n2 n4
+                m1,m2,m3,m4,m5 =n5,n3,n1,n2,n4
+                print(m1,m2,m3,m4,m5)
+            elif n4<n2: #n5 n3 n1 n4 n2
+                m1,m2,m3,m4,m5 =n5,n3,n1,n4,n2
+                print(m1,m2,m3,m4,m5)
+        elif n2<n1 and n2<n4: #n5 n3 n2
+            if n1<n4: #n5 n3 n2 n1 n4
+                m1,m2,m3,m4,m5 =n5,n3,n2,n1,n4
+                print(m1,m2,m3,m4,m5)
+            elif n4<n1: #n5 n3 n2 n4 n1
+                m1,m2,m3,m4,m5 =n5,n3,n2,n4,n1
+                print(m1,m2,m3,m4,m5)
+        elif n4<n1 and n4<n2: #n5 n3 n4
+            if n1<n2: #n5 n3 n4 n1 n2
+                m1,m2,m3,m4,m5 =n5,n3,n4,n1,n2
+                print(m1,m2,m3,m4,m5)
+            elif n2<n1: #n5 n3 n4 n2 n1
+                m1,m2,m3,m4,m5 =n5,n3,n4,n2,n1
+                print(m1,m2,m3,m4,m5)
+    elif n4<n1 and n4<n2 and n4<n3: #n5 n4
+        if n1<n2 and n1<n3: #n5 n4 n1
+            if n2<n3: #n5 n4 n1 n2 n3
+                m1,m2,m3,m4,m5 =n5,n4,n1,n2,n3
+                print(m1,m2,m3,m4,m5)
+            elif n3<n2: #n5 n4 n1 n3 n2
+                m1,m2,m3,m4,m5 =n5,n4,n1,n3,n2
+                print(m1,m2,m3,m4,m5)
+        elif n2<n1 and n2<n3: #n5 n4 n2
+            if n1<n3: #n5 n4 n2 n1 n3
+                m1,m2,m3,m4,m5 =n5,n4,n2,n1,n3
+                print(m1,m2,m3,m4,m5)
+            elif n3<n1: #n5 n4 n2 n3 n1
+                m1,m2,m3,m4,m5 =n5,n4,n2,n3,n1
+                print(m1,m2,m3,m4,m5)
+        elif n3<n1 and n3<n2: #n5 n4 n3
+            if n1<n2: #n5 n4 n3 n1 n2
+                m1,m2,m3,m4,m5 =n5,n4,n3,n1,n2
+                print(m1,m2,m3,m4,m5)
+            elif n2<n1: #n5 n4 n3 n2 n1
+                m1,m2,m3,m4,m5 =n5,n4,n3,n2,n1
+                print(m1,m2,m3,m4,m5)
+
+
 #Ordenar los números de forma descendente
-def num_inv():
-    if n1<n2 and n1<n3 and n1<n4 and n1<n5: #n1
-        if n2<n3 and n2<n4 and n2<n5: #n1 n2
-            if n3<n4 and n3<n5: #n1 n2 n3
-                if n4<n5: #n1 n2 n3 n4
-                    print(n5,n4,n3,n2,n1) #n1 n2 n3 n4 n5
-                elif n5<n4: #n1 n2 n3 n5
-                    print(n4,n5,n3,n2,n1) #n1 n2 n3 n5 n4
-            elif n4<n3 and n4<n5: #n1 n2 n4
-                if n3<n5: #n1 n2 n4 n3 n5
-                    print(n5,n3,n4,n2,n1)
-                elif n5<n3: #n1 n2 n4 n5 n3
-                    print(n3,n5,n4,n2,n1)
-            elif n5<n3 and n5<n4: #n1 n2 n5
-                if n3<n4: #n1 n2 n5 n3 n4
-                    print(n4,n3,n5,n2,n1)
-                elif n4<n3: #n1 n2 n5 n4 n3
-                    print(n3,n4,n5,n2,n1)
-        elif n3<n2 and n3<n4 and n3<n5: #n1 n3
-            if n2<n4 and n2<n5: #n1 n3 n2
-                if n4<n5: #n1 n3 n2 n4 n5
-                    print(n5,n4,n2,n3,n1)
-                elif n5<n4: #n1 n3 n2 n5 n4
-                    print(n4,n5,n2,n3,n1)
-            elif n4<n2 and n4<n5: #n1 n3 n4
-                if n2<n5: #n1 n3 n4 n2 n5
-                    print(n5,n2,n4,n3,n1)
-                elif n5<n2: #n1 n3 n4 n5 n2
-                    print(n2,n5,n4,n3,n1)
-            elif n5<n2 and n5<n4: #n1 n3 n5
-                if n2<n4: #n1 n3 n5 n2 n4
-                    print(n4,n2,n5,n2,n1)
-                elif n4<n2: #n1 n3 n5 n4 n2
-                    print(n2,n4,n5,n3,n1)
-        elif n4<n2 and n4<n3 and n4<n5: #n1 n4
-            if n2<n3 and n2<n5: #n1 n4 n2
-                if n3<n5: #n1 n4 n2 n3 n5
-                    print(n5,n3,n2,n4,n1)
-                elif n5<n3: #n1 n4 n2 n5 n3
-                    print(n3,n5,n2,n4,n1)
-            elif n3<n2 and n3<n5: #n1 n4 n3
-                if n2<n5:#n1 n4 n3 n2 n5
-                    print(n5,n2,n3,n4,n1)
-                elif n5<n2: #n1 n4 n3 n5 n2
-                    print(n2,n5,n3,n4,n1)
-            elif n5<n2 and n5<n3: #n1 n4 n5
-                if n2<n3: #n1 n4 n5 n2 n3
-                    print(n3,n2,n5,n4,n1)
-                elif n3<n2: #n1 n4 n5 n3 n2
-                    print(n2,n3,n5,n4,n1)
-        elif n5<n2 and n5<n3 and n5<n4: #n1 n5
-            if n2<n3 and n2<n4: #n1 n5 n2
-                if n3<n4: #n1 n5 n2 n3 n4
-                    print(n4,n3,n2,n5,n1)
-                elif n4<n3: #n1 n5 n2 n4 n3
-                    print(n3,n4,n2,n5,n1)
-            elif n3<n2 and n3<n4: #n1 n5 n3
-                if n2<n4:#n1 n5 n3 n2 n4
-                    print(n4,n3,n3,n5,n1)
-                elif n4<n2: #n1 n5 n3 n4 n2
-                    print(n2,n4,n3,n5,n1)
-            elif n4<n2 and n4<n3: #n1 n5 n4
-                if n2<n3:#n1 n5 n4 n2 n3
-                    print(n3,n2,n4,n5,n1)
-                elif n3<n2:#n1 n5 n4 n3 n2
-                    print(n2,n3,n4,n5,n1)
-    elif n2<n1 and n2<n3 and n2<n4 and n2<n5: #n2
-        if n1<n3 and n1<n4 and n1<n5: #n2 n1
-            if n3<n4 and n3<n5: #n2 n1 n3
-                if n4<n5: #n2 n1 n3 n4 n5
-                    print(n5,n4,n3,n1,n2)
-                elif n5<n4: #n2 n1 n3 n5 n4
-                    print(n4,n5,n3,n1,n2)
-            elif n4<n3 and n4<n5: #n2 n1 n4
-                if n3<n5: #n2 n1 n4 n3 n5
-                    print(n5,n3,n4,n1,n2)
-                elif n5<n3: #n2 n1 n4 n5 n3
-                    print(n3,n5,n4,n1,n2)
-            elif n5<n3 and n5<n4: #n2 n1 n5
-                if n3<n4: #n2 n1 5n n3 n4
-                    print(n4,n3,n5,n1,n2)
-                elif n4<n3: #n2 n1 n5 n4 n3
-                    print(n3,n4,n5,n1,n2)
-        elif n3<n1 and n3<n4 and n3<n5: #n2 n3
-            if n1<n4 and n1<n5: #n2 n3 n1
-                if n4<n5: #n2 n3 n1 n4 n5
-                    print(n5,n4,n1,n3,n2)
-                elif n5<n4: #n2 n3 n1 n5 n4
-                    print(n4,n5,n1,n3,n2)
-            elif n4<n1 and n4<n5: #n2 n3 n4
-                if n1<n5: #n2 n3 n4 n1 n5
-                    print(n5,n1,n4,n3,n2)
-                elif n5<n1: #n2 n3 n4 n5 n1
-                    print(n1,n5,n4,n3,n2)
-            elif n5<n1 and n5<n4: #n2 n3 n5
-                if n1<n4: #n2 n3 n5 n1 n4
-                    print(n4,n1,n5,n3,n2)
-                elif n4<n1: #n2 n3 n5 n4 n1
-                    print(n1,n4,n5,n3,n2)
-        elif n4<n1 and n4<n3 and n4<n5: #n2 n4
-            if n1<n3 and n1<n5:#n2 n4 n1
-                if n3<n5: #n2 n4 n1 n3 n5
-                    print(n5,n3,n1,n4,n2)
-                elif n5<n3: #n2 n4 n1 n5 n3
-                    print(n3,n5,n1,n4,n2)
-            elif n3<n1 and n3<n5: #n2 n4 n3
-                if n1<n5: #n2 n4 n3 n1 n5
-                    print(n5,n1,n3,n4,n2)
-                elif n5<n1: #n2 n4 n3 n5 n1
-                    print(n1,n5,n3,n4,n2)
-            elif n5<n1 and n5<n3: #n2 n4 n5
-                if n1<n3:#n2 n4 n5 n1 n3
-                    print(n3,n1,n5,n4,n2)
-                elif n3<n1: #n2 n4 n5 n3 n1
-                    print(n1,n3,n5,n4,n2)
-        elif n5<n1 and n5<n3 and n5<n4: #n2 n5
-            if n1<n3 and n1<n4: #n2 n5 n1
-                if n3<n4: #n2 n5 n1 n3 n4
-                    print(n4,n3,n1,n5,n2)
-                elif n4<n3: #n2 n5 n1 n4 n3
-                    print(n3,n4,n1,n5,n2)
-            elif n3<n1 and n3<n4: #n2 n5 n3
-                if n1<n4: #n2 n5 n3 n1 n4
-                    print(n4,n1,n3,n5,n2)
-                elif n4<n1: #n2 n5 n3 n4 n1
-                    print(n1,n4,n3,n5,n2)
-            elif n4<n1 and n4<n3: #n2 n5 n4
-                if n1<n3: #n2 n5 n4 n1 n3
-                    print(n3,n1,n4,n5,n2)
-                elif n3<n1: #n2 n5 n4 n3 n1
-                    print(n1,n3,n4,n5,n2)
-    elif n3<n1 and n3<n2 and n3<n4 and n3<n5:#n3
-        if n1<n2 and n1<n4 and n1<n5: #n3 n1
-            if n2<n4 and n2<n5: #n3 n1 n2
-                if n4<n5: #n3 n1 n2 n4 n5
-                    print(n5,n4,n2,n1,n3)
-                elif n5<n4: #n3 n1 n2 n5 n4
-                    print(n4,n5,n2,n1,n3)
-            elif n4<n2 and n4<n5: #n3 n1 n4
-                if n2<n5: #n3 n1 n4 n2 n5
-                    print(n5,n2,n4,n1,n3)
-                elif n5<n2: #n3 n1 n4 n5 n2
-                    print(n2,n5,n4,n1,n3)
-            elif n5<n2 and n5<n4: #n3 n1 n5
-                if n2<n4: #n3 n1 n5 n2 n4
-                    print(n4,n2,n5,n1,n3)
-                elif n4<n2: #n3 n1 n5 n4 n2
-                    print(n2,n4,n5,n1,n3)
-        elif n2<n1 and n2<n4 and n2<n5: #n3 n2
-            if n1<n4 and n1<n5: #n3 n2 n1
-                if n4<n5: #n3 n2 n1 n4 n5
-                    print(n5,n4,n1,n2,n3)
-                elif n5<n4: #n3 n2 n1 n5 n4
-                    print(n4,n5,n1,n2,n3)
-            if n4<n1 and n4<n5: #n3 n2 n4
-                if n1<n5: #n3 n2 n4 n1 n5
-                    print(n5,n1,n4,n2,n3)
-                elif n5<n1: #n3 n2 n4 n5 n1
-                    print(n1,n5,n4,n2,n3)
-            if n5<n1 and n5<n4: #n3 n2 n5
-                if n1<n4: #n3 n2 n5 n1 n4
-                    print(n4,n1,n5,n2,n3)
-                elif n4<n1: #n3 n2 n5 n4 n1
-                    print(n1,n4,n5,n2,n3)
-        elif n4<n1 and n4<n2 and n4<n5: #n3 n4
-            if n1<n2 and n1<n5: #n3 n4 n1
-                if n2<n5: #n3 n4 n1 n2 n5
-                    print(n5,n2,n1,n4,n3)
-                elif n5<n2: #n3 n4 n1 n5 n2
-                    print(n2,n5,n1,n4,n3)
-            elif n2<n1 and n2<n5: #n3 n4 n2
-                if n1<n5: #n3 n4 n2 n1 n5
-                    print(n5,n1,n2,n4,n3)
-                elif n5<n1: #n3 n4 n2 n5 n1
-                    print(n1,n5,n2,n4,n3)
-            elif n5<n1 and n5<n2: #n3 n4 n5
-                if n1<n2: #n3 n4 n5 n1 n2
-                    print(n2,n1,n5,n4,n3)
-                elif n2<n1: #n3 n4 n5 n2 n1
-                    print(n1,n2,n5,n4,n3)
-        elif n5<n1 and n5<n2 and n5<n4: #n3 n5
-            if n1<n2 and n1<n4: #n3 n5 n1
-                if n2<n4: #n3 n5 n1 n2 n4
-                    print(n4,n2,n1,n5,n3)
-                elif n4<n2: #n3 n5 n1 n4 n2
-                    print(n3,n4,n1,n5,n3)
-            elif n2<n1 and n2<n4: #n3 n5 n2
-                if n1<n4: #n3 n5 n2 n1 n4
-                    print(n4,n1,n2,n5,n3)
-                elif n4<n1: #n3 n5 n2 n4 n1
-                    print(n1,n4,n2,n5,n3)
-            elif n4<n1 and n4<n2: #n3 n5 n4
-                if n1<n2: #n3 n5 n4 n1 n2
-                    print(n2,n1,n4,n5,n3)
-                elif n2<n1: #n3 n5 n4 n2 n1
-                    print(n1,n2,n4,n5,n3)
-    elif n4<n1 and n4<n2 and n4<n3 and n4<n5:#n4
-        if n1<n2 and n1<n3 and n1<n5: #n4 n1
-            if n2<n3 and n2<n5: #n4 n1 n2
-                if n3<n5: #n4 n1 n2 n3 n5
-                    print(n5,n3,n2,n1,n4)
-                elif n5<n3: #n4 n1 n2 n5 n3
-                    print(n3,n5,n2,n1,n4)
-            elif n3<n2 and n3<n5: #n4 n1 n3
-                if n2<n5: #n4 n1 n3 n2 n5
-                    print(n5,n2,n3,n1,n4)
-                elif n5<n2: #n4 n1 n3 n5 n2
-                    print(n2,n5,n3,n1,n4)
-            elif n5<n2 and n5<n3: #n4 n1 n5
-                if n2<n3: #n4 n1 n5 n2 n3
-                    print(n3,n2,n5,n1,n4)
-                elif n3<n2: #n4 n1 n5 n3 n2
-                    print(n2,n3,n5,n1,n4)
-        elif n2<n1 and n2<n3 and n2<n5: #n4 n2
-            if n1<n3 and n1<n5: #n4 n2 n1
-                if n3<n5: #n4 n2 n1 n3 n5
-                    print(n5,n3,n1,n2,n4)
-                elif n5<n3: #n4 n2 n1 n5 n3
-                    print(n3,n5,n1,n2,n4)
-            elif n3<n1 and n3<n5: #n4 n2 n3
-                if n1<n5: #n4 n2 n3 n1 n5
-                    print(n1,n5,n3,n2,n4)
-                elif n5<n1: #n4 n2 n3 n5 n1
-                    print(n1,n5,n3,n2,n4)
-            elif n5<n1 and n5<n3: #n4 n2 n5
-                if n1<n3: #n4 n2 n5 n1 n3
-                    print(n3,n1,n5,n2,n4)
-                elif n3<n1: #n4 n2 n5 n3 n1
-                    print(n1,n3,n5,n2,n4)
-        elif n3<n1 and n3<n2 and n3<n5: #n4 n3
-            if n1<n2 and n1<n5: #n4 n3 n1
-                if n2<n5: #n4 n3 n1 n2 n5
-                    print(n5,n2,n1,n3,n4)
-                elif n5<n2: #n4 n3 n1 n5 n2
-                    print(n2,n5,n1,n3,n4)
-            elif n2<n1 and n2<n5: #n4 n3 n2
-                if n1<n5: #n4 n3 n2 n1 n5
-                    print(n5,n1,n2,n3,n4)
-                elif n5<n1: #n4 n3 n2 n5 n1
-                    print(n1,n5,n2,n3,n4)
-            elif n5<n1 and n5<n2: #n4 n3 n5
-                if n1<n2: #n4 n3 n5 n1 n2
-                    print(n2,n1,n5,n3,n4)
-                elif n2<n1: #n4 n3 n5 n2 n1
-                    print(n1,n2,n5,n3,n4)
-        elif n5<n1 and n5<n2 and n5<n3: #n4 n5
-            if n1<n2 and n1<n3: #n4 n5 n1
-                if n2<n3: #n4 n5 n1 n2 n3
-                    print(n3,n2,n1,n5,n4)
-                elif n3<n2: #n4 n5 n1 n3 n2
-                    print(n2,n3,n1,n5,n4)
-            elif n2<n1 and n2<n3: #n4 n5 n2
-                if n1<n3: #n4 n5 n2 n1 n3
-                    print(n3,n2,n2,n5,n4)
-                elif n3<n1: #n4 n5 n2 n3 n1
-                    print(n1,n3,n2,n5,n4)
-            elif n3<n1 and n3<n2: #n4 n5 n3
-                if n1<n2: #n4 n5 n3 n1 n2
-                    print(n2,n1,n3,n5,n4)
-                elif n2<n1: #n4 n5 n3 n2 n1
-                    print(n1,n2,n3,n5,n4)
-    elif n5<n1 and n5<n2 and n5<n3 and n5<n4: #n5
-        if n1<n2 and n1<n3 and n1<n4: #n5 n1
-            if n2<n3 and n2<n4: #n5 n1 n2
-                if n3<n4: #n5 n1 n2 n3 n4
-                    print(n4,n3,n2,n1,n5)
-                elif n4<n3: #n5 n1 n2 n4 n3
-                    print(n3,n4,n2,n1,n5)
-            elif n3<n2 and n3<n4: #n5 n1 n3
-                if n2<n4: #n5 n1 n3 n2 n4
-                    print(n4,n2,n3,n1,n5)
-                elif n4<n2: #n5 n1 n3 n4 n2
-                    print(n2,n4,n3,n1,n5)
-            elif n4<n2 and n4<n3: #n5 n1 n4
-                if n2<n3: #n5 n1 n4 n2 n3
-                    print(n3,n2,n4,n1,n5)
-                elif n3<n2: #n5 n1 n4 n3 n2
-                    print(n2,n3,n4,n1,n5)
-        elif n2<n1 and n2<n3 and n2<n4: #n5 n2
-            if n1<n3 and n1<n4:#n5 n2 n1
-                if n3<n4: #n5 n2 n1 n3 n4
-                    print(n4,n3,n1,n2,n5)
-                elif n4<n3: #n5 n2 n1 n4 n3
-                    print(n2,n4,n1,n2,n5)
-            elif n3<n1 and n3<n4: #n5 n2 n3
-                if n1<n4: #n5 n2 n3 n1 n4
-                    print(n4,n1,n3,n2,n5)
-                elif n4<n1: #n5 n2 n3 n4 n1
-                    print(n1,n4,n3,n2,n5)
-            elif n4<n1 and n4<n3: #n5 n2 n4
-                if n1<n3: #n5 n2 n4 n1 n3
-                    print(n3,n1,n4,n2,n5)
-                elif n3<n1: #n5 n2 n4 n3 n1
-                    print(n1,n3,n4,n2,n5)
-        elif n3<n1 and n3<n2 and n3<n4: #n5 n3
-            if n1<n2 and n1<n4: #n5 n3 n1
-                if n2<n4: #n5 n3 n1 n2 n4
-                    print(n4,n2,n1,n3,n5)
-                elif n4<n2: #n5 n3 n1 n4 n2
-                    print(n2,n4,n1,n3,n5)
-            elif n2<n1 and n2<n4: #n5 n3 n2
-                if n1<n4: #n5 n3 n2 n1 n4
-                    print(n4,n1,n2,n3,n5)
-                elif n4<n1: #n5 n3 n2 n4 n1
-                    print(n1,n4,n2,n3,n5)
-            elif n4<n1 and n4<n2: #n5 n3 n4
-                if n1<n2: #n5 n3 n4 n1 n2
-                    print(n2,n1,n4,n3,n5)
-                elif n2<n1: #n5 n3 n4 n2 n1
-                    print(n1,n2,n4,n3,n5)
-        elif n4<n1 and n4<n2 and n4<n3: #n5 n4
-            if n1<n2 and n1<n3: #n5 n4 n1
-                if n2<n3: #n5 n4 n1 n2 n3
-                    print(n3,n2,n1,n4,n5)
-                elif n3<n2: #n5 n4 n1 n3 n2
-                    print(n2,n3,n1,n4,n5)
-            elif n2<n1 and n2<n3: #n5 n4 n2
-                if n1<n3: #n5 n4 n2 n1 n3
-                    print(n3,n1,n2,n4,n5)
-                elif n3<n1: #n5 n4 n2 n3 n1
-                    print(n1,n3,n2,n4,n5)
-            elif n3<n1 and n3<n2: #n5 n4 n3
-                if n1<n2: #n5 n4 n3 n1 n2
-                    print(n2,n1,n3,n4,n5)
-                elif n2<n1: #n5 n4 n3 n2 n1
-                    print(n1,n2,n3,n4,n5)
-```
-``` python
-print("4) Los números organizados de mayor a menor se ve de la siguiente manera: ",num_inv)
+print("5) Los números organizados de mayor a menor se ve de la siguiente manera: ")
+if n1<n2 and n1<n3 and n1<n4 and n1<n5: #n1
+    if n2<n3 and n2<n4 and n2<n5: #n1 n2
+        if n3<n4 and n3<n5: #n1 n2 n3
+            if n4<n5: #n1 n2 n3 n4
+                m1,m2,m3,m4,m5 =n1,n2,n3,n4,n5 #n1 n2 n3 n4 n5
+                print(m5,m4,m3,m2,m1)
+            elif n5<n4: #n1 n2 n3 n5
+                m1,m2,m3,m4,m5 =n1,n2,n3,n5,n4 #n1 n2 n3 n5 n4
+                print(m5,m4,m3,m2,m1)
+        elif n4<n3 and n4<n5: #n1 n2 n4
+            if n3<n5: #n1 n2 n4 n3 n5
+                m1,m2,m3,m4,m5 =n1,n2,n4,n3,n5
+                print(m5,m4,m3,m2,m1)
+            elif n5<n3: #n1 n2 n4 n5 n3
+                m1,m2,m3,m4,m5 =n1,n2,n4,n5,n3
+                print(m5,m4,m3,m2,m1)
+        elif n5<n3 and n5<n4: #n1 n2 n5
+            if n3<n4: #n1 n2 n5 n3 n4
+                m1,m2,m3,m4,m5 =n1,n2,n5,n3,n4
+                print(m5,m4,m3,m2,m1)
+            elif n4<n3: #n1 n2 n5 n4 n3
+                m1,m2,m3,m4,m5 =n1,n2,n5,n4,n3
+                print(m5,m4,m3,m2,m1)
+    elif n3<n2 and n3<n4 and n3<n5: #n1 n3
+        if n2<n4 and n2<n5: #n1 n3 n2
+            if n4<n5: #n1 n3 n2 n4 n5
+                m1,m2,m3,m4,m5 =n1,n3,n2,n4,n5
+                print(m5,m4,m3,m2,m1)
+            elif n5<n4: #n1 n3 n2 n5 n4
+                m1,m2,m3,m4,m5 =n1,n3,n2,n5,n4
+                print(m5,m4,m3,m2,m1)
+        elif n4<n2 and n4<n5: #n1 n3 n4
+            if n2<n5: #n1 n3 n4 n2 n5
+                m1,m2,m3,m4,m5 =n1,n3,n4,n2,n5
+                print(m5,m4,m3,m2,m1)
+            elif n5<n2: #n1 n3 n4 n5 n2
+                m1,m2,m3,m4,m5 =n1,n3,n4,n5,n2
+                print(m5,m4,m3,m2,m1)
+        elif n5<n2 and n5<n4: #n1 n3 n5
+            if n2<n4: #n1 n3 n5 n2 n4
+                m1,m2,m3,m4,m5 =n1,n3,n5,n2,n4
+                print(m5,m4,m3,m2,m1)
+            elif n4<n2: #n1 n3 n5 n4 n2
+                m1,m2,m3,m4,m5 =n1,n3,n5,n4,n2
+                print(m5,m4,m3,m2,m1)
+    elif n4<n2 and n4<n3 and n4<n5: #n1 n4
+        if n2<n3 and n2<n5: #n1 n4 n2
+            if n3<n5: #n1 n4 n2 n3 n5
+                m1,m2,m3,m4,m5 =n1,n4,n2,n3,n5
+                print(m5,m4,m3,m2,m1)
+            elif n5<n3: #n1 n4 n2 n5 n3
+                m1,m2,m3,m4,m5 =n1,n4,n2,n5,n3
+                print(m5,m4,m3,m2,m1)
+        elif n3<n2 and n3<n5: #n1 n4 n3
+            if n2<n5:#n1 n4 n3 n2 n5
+                m1,m2,m3,m4,m5 =n1,n4,n3,n2,n5
+                print(m5,m4,m3,m2,m1)
+            elif n5<n2: #n1 n4 n3 n5 n2
+                m1,m2,m3,m4,m5 =n1,n4,n3,n5,n2
+                print(m5,m4,m3,m2,m1)
+        elif n5<n2 and n5<n3: #n1 n4 n5
+            if n2<n3: #n1 n4 n5 n2 n3
+                m1,m2,m3,m4,m5 =n1,n4,n5,n2,n3
+                print(m5,m4,m3,m2,m1)
+            elif n3<n2: #n1 n4 n5 n3 n2
+                m1,m2,m3,m4,m5 =n1,n4,n5,n3,n2
+                print(m5,m4,m3,m2,m1)
+    elif n5<n2 and n5<n3 and n5<n4: #n1 n5
+        if n2<n3 and n2<n4: #n1 n5 n2
+            if n3<n4: #n1 n5 n2 n3 n4
+                m1,m2,m3,m4,m5 =n1,n5,n2,n3,n4
+                print(m5,m4,m3,m2,m1)
+            elif n4<n3: #n1 n5 n2 n4 n3
+                m1,m2,m3,m4,m5 =n1,n5,n2,n4,n3
+                print(m5,m4,m3,m2,m1)
+        elif n3<n2 and n3<n4: #n1 n5 n3
+            if n2<n4:#n1 n5 n3 n2 n4
+                m1,m2,m3,m4,m5 =n1,n5,n3,n2,n4
+                print(m5,m4,m3,m2,m1)
+            elif n4<n2: #n1 n5 n3 n4 n2
+                m1,m2,m3,m4,m5 =n1,n5,n3,n4,n2
+                print(m5,m4,m3,m2,m1)
+        elif n4<n2 and n4<n3: #n1 n5 n4
+            if n2<n3:#n1 n5 n4 n2 n3
+                m1,m2,m3,m4,m5 =n1,n5,n4,n2,n3
+                print(m5,m4,m3,m2,m1)
+            elif n3<n2:#n1 n5 n4 n3 n2
+                m1,m2,m3,m4,m5 =n1,n5,n4,n3,n2
+                print(m5,m4,m3,m2,m1)
+elif n2<n1 and n2<n3 and n2<n4 and n2<n5: #n2
+    if n1<n3 and n1<n4 and n1<n5: #n2 n1
+        if n3<n4 and n3<n5: #n2 n1 n3
+            if n4<n5: #n2 n1 n3 n4 n5
+                m1,m2,m3,m4,m5 =n2,n1,n3,n4,n5
+                print(m5,m4,m3,m2,m1)
+            elif n5<n4: #n2 n1 n3 n5 n4
+                m1,m2,m3,m4,m5 =n2,n1,n3,n5,n4
+                print(m5,m4,m3,m2,m1)
+        elif n4<n3 and n4<n5: #n2 n1 n4
+            if n3<n5: #n2 n1 n4 n3 n5
+                m1,m2,m3,m4,m5 =n2,n1,n4,n3,n5
+                print(m5,m4,m3,m2,m1)
+            elif n5<n3: #n2 n1 n4 n5 n3
+                m1,m2,m3,m4,m5 =n2,n1,n4,n5,n3
+                print(m5,m4,m3,m2,m1)
+        elif n5<n3 and n5<n4: #n2 n1 n5
+            if n3<n4: #n2 n1 5n n3 n4
+                m1,m2,m3,m4,m5 =n2,n1,n5,n3,n4
+                print(m5,m4,m3,m2,m1)
+            elif n4<n3: #n2 n1 n5 n4 n3
+                m1,m2,m3,m4,m5 =n2,n1,n5,n4,n3
+                print(m5,m4,m3,m2,m1)
+    elif n3<n1 and n3<n4 and n3<n5: #n2 n3
+        if n1<n4 and n1<n5: #n2 n3 n1
+            if n4<n5: #n2 n3 n1 n4 n5
+                m1,m2,m3,m4,m5 =n2,n3,n1,n4,n5
+                print(m5,m4,m3,m2,m1)
+            elif n5<n4: #n2 n3 n1 n5 n4
+                m1,m2,m3,m4,m5 =n2,n3,n1,n5,n4
+                print(m5,m4,m3,m2,m1)
+        elif n4<n1 and n4<n5: #n2 n3 n4
+            if n1<n5: #n2 n3 n4 n1 n5
+                m1,m2,m3,m4,m5 =n2,n3,n4,n1,n5
+                print(m5,m4,m3,m2,m1)
+            elif n5<n1: #n2 n3 n4 n5 n1
+                m1,m2,m3,m4,m5 =n2,n3,n4,n5,n1
+                print(m5,m4,m3,m2,m1)
+        elif n5<n1 and n5<n4: #n2 n3 n5
+            if n1<n4: #n2 n3 n5 n1 n4
+                m1,m2,m3,m4,m5 =n2,n3,n5,n1,n4
+                print(m5,m4,m3,m2,m1)
+            elif n4<n1: #n2 n3 n5 n4 n1
+                m1,m2,m3,m4,m5 =n2,n3,n5,n4,n1
+                print(m5,m4,m3,m2,m1)
+    elif n4<n1 and n4<n3 and n4<n5: #n2 n4
+        if n1<n3 and n1<n5:#n2 n4 n1
+            if n3<n5: #n2 n4 n1 n3 n5
+                m1,m2,m3,m4,m5 =n2,n4,n1,n3,n5
+                print(m5,m4,m3,m2,m1)
+            elif n5<n3: #n2 n4 n1 n5 n3
+                m1,m2,m3,m4,m5 =n2,n4,n1,n5,n3
+                print(m5,m4,m3,m2,m1)
+        elif n3<n1 and n3<n5: #n2 n4 n3
+            if n1<n5: #n2 n4 n3 n1 n5
+                m1,m2,m3,m4,m5 =n2,n4,n3,n1,n5
+                print(m5,m4,m3,m2,m1)
+            elif n5<n1: #n2 n4 n3 n5 n1
+                m1,m2,m3,m4,m5 =n2,n4,n3,n5,n1
+                print(m5,m4,m3,m2,m1)
+        elif n5<n1 and n5<n3: #n2 n4 n5
+            if n1<n3:#n2 n4 n5 n1 n3
+                m1,m2,m3,m4,m5 =n2,n4,n5,n1,n3
+                print(m5,m4,m3,m2,m1)
+            elif n3<n1: #n2 n4 n5 n3 n1
+                m1,m2,m3,m4,m5 =n2,n4,n5,n3,n1
+                print(m5,m4,m3,m2,m1)
+    elif n5<n1 and n5<n3 and n5<n4: #n2 n5
+        if n1<n3 and n1<n4: #n2 n5 n1
+            if n3<n4: #n2 n5 n1 n3 n4
+                m1,m2,m3,m4,m5 =n2,n5,n1,n3,n4
+                print(m5,m4,m3,m2,m1)
+            elif n4<n3: #n2 n5 n1 n4 n3
+                m1,m2,m3,m4,m5 =n2,n5,n1,n4,n3
+                print(m5,m4,m3,m2,m1)
+        elif n3<n1 and n3<n4: #n2 n5 n3
+            if n1<n4: #n2 n5 n3 n1 n4
+                m1,m2,m3,m4,m5 =n2,n5,n3,n1,n4
+                print(m5,m4,m3,m2,m1)
+            elif n4<n1: #n2 n5 n3 n4 n1
+                m1,m2,m3,m4,m5 =n2,n5,n3,n4,n1
+                print(m5,m4,m3,m2,m1)
+        elif n4<n1 and n4<n3: #n2 n5 n4
+            if n1<n3: #n2 n5 n4 n1 n3
+                m1,m2,m3,m4,m5 =n2,n5,n4,n1,n3
+                print(m5,m4,m3,m2,m1)
+            elif n3<n1: #n2 n5 n4 n3 n1
+                m1,m2,m3,m4,m5 =n2,n5,n4,n3,n1
+                print(m5,m4,m3,m2,m1)
+elif n3<n1 and n3<n2 and n3<n4 and n3<n5:#n3
+    if n1<n2 and n1<n4 and n1<n5: #n3 n1
+        if n2<n4 and n2<n5: #n3 n1 n2
+            if n4<n5: #n3 n1 n2 n4 n5
+                m1,m2,m3,m4,m5 =n3,n1,n2,n4,n5
+                print(m5,m4,m3,m2,m1)
+            elif n5<n4: #n3 n1 n2 n5 n4
+                m1,m2,m3,m4,m5 =n3,n1,n2,n5,n4
+                print(m5,m4,m3,m2,m1)
+        elif n4<n2 and n4<n5: #n3 n1 n4
+            if n2<n5: #n3 n1 n4 n2 n5
+                m1,m2,m3,m4,m5 =n3,n1,n4,n2,n5
+                print(m5,m4,m3,m2,m1)
+            elif n5<n2: #n3 n1 n4 n5 n2
+                m1,m2,m3,m4,m5 =n3,n1,n4,n5,n2
+                print(m5,m4,m3,m2,m1)
+        elif n5<n2 and n5<n4: #n3 n1 n5
+            if n2<n4: #n3 n1 n5 n2 n4
+                m1,m2,m3,m4,m5 =n3,n1,n5,n2,n4
+                print(m5,m4,m3,m2,m1)
+            elif n4<n2: #n3 n1 n5 n4 n2
+                m1,m2,m3,m4,m5 =n3,n1,n5,n4,n2
+                print(m5,m4,m3,m2,m1)
+    elif n2<n1 and n2<n4 and n2<n5: #n3 n2
+        if n1<n4 and n1<n5: #n3 n2 n1
+            if n4<n5: #n3 n2 n1 n4 n5
+                m1,m2,m3,m4,m5 =n3,n2,n1,n4,n5
+                print(m5,m4,m3,m2,m1)
+            elif n5<n4: #n3 n2 n1 n5 n4
+                m1,m2,m3,m4,m5 =n3,n2,n1,n5,n4
+                print(m5,m4,m3,m2,m1)
+        if n4<n1 and n4<n5: #n3 n2 n4
+            if n1<n5: #n3 n2 n4 n1 n5
+                m1,m2,m3,m4,m5 =n3,n2,n4,n1,n5
+                print(m5,m4,m3,m2,m1)
+            elif n5<n1: #n3 n2 n4 n5 n1
+                m1,m2,m3,m4,m5 =n3,n2,n4,n5,n1
+                print(m5,m4,m3,m2,m1)
+        if n5<n1 and n5<n4: #n3 n2 n5
+            if n1<n4: #n3 n2 n5 n1 n4
+                m1,m2,m3,m4,m5 =n3,n2,n5,n1,n4
+                print(m5,m4,m3,m2,m1)
+            elif n4<n1: #n3 n2 n5 n4 n1
+                m1,m2,m3,m4,m5 =n3,n2,n5,n4,n1
+                print(m5,m4,m3,m2,m1)
+    elif n4<n1 and n4<n2 and n4<n5: #n3 n4
+        if n1<n2 and n1<n5: #n3 n4 n1
+            if n2<n5: #n3 n4 n1 n2 n5
+                m1,m2,m3,m4,m5 =n3,n4,n1,n2,n5
+                print(m5,m4,m3,m2,m1)
+            elif n5<n2: #n3 n4 n1 n5 n2
+                m1,m2,m3,m4,m5 =n3,n4,n1,n5,n2
+                print(m5,m4,m3,m2,m1)
+        elif n2<n1 and n2<n5: #n3 n4 n2
+            if n1<n5: #n3 n4 n2 n1 n5
+                m1,m2,m3,m4,m5 =n3,n4,n2,n1,n5
+                print(m5,m4,m3,m2,m1)
+            elif n5<n1: #n3 n4 n2 n5 n1
+                m1,m2,m3,m4,m5 =n3,n4,n2,n5,n1
+                print(m5,m4,m3,m2,m1)
+        elif n5<n1 and n5<n2: #n3 n4 n5
+            if n1<n2: #n3 n4 n5 n1 n2
+                m1,m2,m3,m4,m5 =n3,n4,n5,n1,n2
+                print(m5,m4,m3,m2,m1)
+            elif n2<n1: #n3 n4 n5 n2 n1
+                m1,m2,m3,m4,m5 =n3,n4,n5,n2,n1
+                print(m5,m4,m3,m2,m1)
+    elif n5<n1 and n5<n2 and n5<n4: #n3 n5
+        if n1<n2 and n1<n4: #n3 n5 n1
+            if n2<n4: #n3 n5 n1 n2 n4
+                m1,m2,m3,m4,m5 =n3,n5,n1,n2,n4
+                print(m5,m4,m3,m2,m1)
+            elif n4<n2: #n3 n5 n1 n4 n2
+                m1,m2,m3,m4,m5 =n3,n5,n1,n4,n2
+                print(m5,m4,m3,m2,m1)
+        elif n2<n1 and n2<n4: #n3 n5 n2
+            if n1<n4: #n3 n5 n2 n1 n4
+                m1,m2,m3,m4,m5 =n3,n5,n2,n1,n4
+                print(m5,m4,m3,m2,m1)
+            elif n4<n1: #n3 n5 n2 n4 n1
+                m1,m2,m3,m4,m5 =n3,n5,n2,n4,n1
+                print(m5,m4,m3,m2,m1)
+        elif n4<n1 and n4<n2: #n3 n5 n4
+            if n1<n2: #n3 n5 n4 n1 n2
+                m1,m2,m3,m4,m5 =n3,n5,n4,n1,n2
+                print(m5,m4,m3,m2,m1)
+            elif n2<n1: #n3 n5 n4 n2 n1
+                m1,m2,m3,m4,m5 =n3,n5,n4,n2,n1
+                print(m5,m4,m3,m2,m1)
+elif n4<n1 and n4<n2 and n4<n3 and n4<n5:#n4
+    if n1<n2 and n1<n3 and n1<n5: #n4 n1
+        if n2<n3 and n2<n5: #n4 n1 n2
+            if n3<n5: #n4 n1 n2 n3 n5
+                m1,m2,m3,m4,m5 =n4,n1,n2,n3,n5
+                print(m5,m4,m3,m2,m1)
+            elif n5<n3: #n4 n1 n2 n5 n3
+                m1,m2,m3,m4,m5 =n4,n1,n2,n5,n3
+                print(m5,m4,m3,m2,m1)
+        elif n3<n2 and n3<n5: #n4 n1 n3
+            if n2<n5: #n4 n1 n3 n2 n5
+                m1,m2,m3,m4,m5 =n4,n1,n3,n2,n5
+                print(m5,m4,m3,m2,m1)
+            elif n5<n2: #n4 n1 n3 n5 n2
+                m1,m2,m3,m4,m5 =n4,n1,n3,n5,n2
+                print(m5,m4,m3,m2,m1)
+        elif n5<n2 and n5<n3: #n4 n1 n5
+            if n2<n3: #n4 n1 n5 n2 n3
+                m1,m2,m3,m4,m5 =n4,n1,n5,n2,n3
+                print(m5,m4,m3,m2,m1)
+            elif n3<n2: #n4 n1 n5 n3 n2
+                m1,m2,m3,m4,m5 =n4,n1,n5,n3,n2
+                print(m5,m4,m3,m2,m1)
+    elif n2<n1 and n2<n3 and n2<n5: #n4 n2
+        if n1<n3 and n1<n5: #n4 n2 n1
+            if n3<n5: #n4 n2 n1 n3 n5
+                m1,m2,m3,m4,m5 =n4,n2,n1,n3,n5
+                print(m5,m4,m3,m2,m1)
+            elif n5<n3: #n4 n2 n1 n5 n3
+                m1,m2,m3,m4,m5 =n4,n2,n1,n5,n3
+                print(m5,m4,m3,m2,m1)
+        elif n3<n1 and n3<n5: #n4 n2 n3
+            if n1<n5: #n4 n2 n3 n1 n5
+                m1,m2,m3,m4,m5 =n4,n2,n3,n1,n5
+                print(m5,m4,m3,m2,m1)
+            elif n5<n1: #n4 n2 n3 n5 n1
+                m1,m2,m3,m4,m5 =n4,n2,n3,n5,n1
+                print(m5,m4,m3,m2,m1)
+        elif n5<n1 and n5<n3: #n4 n2 n5
+            if n1<n3: #n4 n2 n5 n1 n3
+                m1,m2,m3,m4,m5 =n4,n2,n5,n1,n3
+                print(m5,m4,m3,m2,m1)
+            elif n3<n1: #n4 n2 n5 n3 n1
+                m1,m2,m3,m4,m5 =n4,n2,n5,n3,n1
+                print(m5,m4,m3,m2,m1)
+    elif n3<n1 and n3<n2 and n3<n5: #n4 n3
+        if n1<n2 and n1<n5: #n4 n3 n1
+            if n2<n5: #n4 n3 n1 n2 n5
+                m1,m2,m3,m4,m5 =n4,n3,n1,n2,n5
+                print(m5,m4,m3,m2,m1)
+            elif n5<n2: #n4 n3 n1 n5 n2
+                m1,m2,m3,m4,m5 =n4,n3,n1,n5,n2
+                print(m5,m4,m3,m2,m1)
+        elif n2<n1 and n2<n5: #n4 n3 n2
+            if n1<n5: #n4 n3 n2 n1 n5
+                m1,m2,m3,m4,m5 =n4,n3,n2,n1,n5
+                print(m5,m4,m3,m2,m1)
+            elif n5<n1: #n4 n3 n2 n5 n1
+                m1,m2,m3,m4,m5 =n4,n3,n2,n5,n1
+                print(m5,m4,m3,m2,m1)
+        elif n5<n1 and n5<n2: #n4 n3 n5
+            if n1<n2: #n4 n3 n5 n1 n2
+                m1,m2,m3,m4,m5 =n4,n3,n5,n1,n2
+                print(m5,m4,m3,m2,m1)
+            elif n2<n1: #n4 n3 n5 n2 n1
+                m1,m2,m3,m4,m5 =n4,n3,n5,n2,n1
+                print(m5,m4,m3,m2,m1)
+    elif n5<n1 and n5<n2 and n5<n3: #n4 n5
+        if n1<n2 and n1<n3: #n4 n5 n1
+            if n2<n3: #n4 n5 n1 n2 n3
+                m1,m2,m3,m4,m5 =n4,n5,n1,n2,n3
+                print(m5,m4,m3,m2,m1)
+            elif n3<n2: #n4 n5 n1 n3 n2
+                m1,m2,m3,m4,m5 =n4,n5,n1,n3,n2
+                print(m5,m4,m3,m2,m1)
+        elif n2<n1 and n2<n3: #n4 n5 n2
+            if n1<n3: #n4 n5 n2 n1 n3
+                m1,m2,m3,m4,m5 =n4,n5,n2,n1,n3
+                print(m5,m4,m3,m2,m1)
+            elif n3<n1: #n4 n5 n2 n3 n1
+                m1,m2,m3,m4,m5 =n4,n5,n2,n3,n1
+                print(m5,m4,m3,m2,m1)
+        elif n3<n1 and n3<n2: #n4 n5 n3
+            if n1<n2: #n4 n5 n3 n1 n2
+                m1,m2,m3,m4,m5 =n4,n5,n3,n1,n2
+                print(m5,m4,m3,m2,m1)
+            elif n2<n1: #n4 n5 n3 n2 n1
+                m1,m2,m3,m4,m5 =n4,n5,n3,n2,n1
+                print(m5,m4,m3,m2,m1)
+elif n5<n1 and n5<n2 and n5<n3 and n5<n4: #n5
+    if n1<n2 and n1<n3 and n1<n4: #n5 n1
+        if n2<n3 and n2<n4: #n5 n1 n2
+            if n3<n4: #n5 n1 n2 n3 n4
+                m1,m2,m3,m4,m5 =n5,n1,n2,n3,n4
+                print(m5,m4,m3,m2,m1)
+            elif n4<n3: #n5 n1 n2 n4 n3
+                m1,m2,m3,m4,m5 =n5,n1,n2,n4,n3
+                print(m5,m4,m3,m2,m1)
+        elif n3<n2 and n3<n4: #n5 n1 n3
+            if n2<n4: #n5 n1 n3 n2 n4
+                m1,m2,m3,m4,m5 =n5,n1,n3,n2,n4
+                print(m5,m4,m3,m2,m1)
+            elif n4<n2: #n5 n1 n3 n4 n2
+                m1,m2,m3,m4,m5 =n5,n1,n3,n4,n2
+                print(m5,m4,m3,m2,m1)
+        elif n4<n2 and n4<n3: #n5 n1 n4
+            if n2<n3: #n5 n1 n4 n2 n3
+                m1,m2,m3,m4,m5 =n5,n1,n4,n2,n3
+                print(m5,m4,m3,m2,m1)
+            elif n3<n2: #n5 n1 n4 n3 n2
+                m1,m2,m3,m4,m5 =n5,n1,n4,n3,n2
+                print(m5,m4,m3,m2,m1)
+    elif n2<n1 and n2<n3 and n2<n4: #n5 n2
+        if n1<n3 and n1<n4:#n5 n2 n1
+            if n3<n4: #n5 n2 n1 n3 n4
+                m1,m2,m3,m4,m5 =n5,n2,n1,n3,n4
+                print(m5,m4,m3,m2,m1)
+            elif n4<n3: #n5 n2 n1 n4 n3
+                m1,m2,m3,m4,m5 =n5,n2,n1,n4,n3
+                print(m5,m4,m3,m2,m1)
+        elif n3<n1 and n3<n4: #n5 n2 n3
+            if n1<n4: #n5 n2 n3 n1 n4
+                m1,m2,m3,m4,m5 =n5,n2,n3,n1,n4
+                print(m5,m4,m3,m2,m1)
+            elif n4<n1: #n5 n2 n3 n4 n1
+                m1,m2,m3,m4,m5 =n5,n2,n3,n4,n1
+                print(m5,m4,m3,m2,m1)
+        elif n4<n1 and n4<n3: #n5 n2 n4
+            if n1<n3: #n5 n2 n4 n1 n3
+                m1,m2,m3,m4,m5 =n5,n2,n4,n1,n3
+                print(m5,m4,m3,m2,m1)
+            elif n3<n1: #n5 n2 n4 n3 n1
+                m1,m2,m3,m4,m5 =n5,n2,n4,n3,n1
+                print(m5,m4,m3,m2,m1)
+    elif n3<n1 and n3<n2 and n3<n4: #n5 n3
+        if n1<n2 and n1<n4: #n5 n3 n1
+            if n2<n4: #n5 n3 n1 n2 n4
+                m1,m2,m3,m4,m5 =n5,n3,n1,n2,n4
+                print(m5,m4,m3,m2,m1)
+            elif n4<n2: #n5 n3 n1 n4 n2
+                m1,m2,m3,m4,m5 =n5,n3,n1,n4,n2
+                print(m5,m4,m3,m2,m1)
+        elif n2<n1 and n2<n4: #n5 n3 n2
+            if n1<n4: #n5 n3 n2 n1 n4
+                m1,m2,m3,m4,m5 =n5,n3,n2,n1,n4
+                print(m5,m4,m3,m2,m1)
+            elif n4<n1: #n5 n3 n2 n4 n1
+                m1,m2,m3,m4,m5 =n5,n3,n2,n4,n1
+                print(m5,m4,m3,m2,m1)
+        elif n4<n1 and n4<n2: #n5 n3 n4
+            if n1<n2: #n5 n3 n4 n1 n2
+                m1,m2,m3,m4,m5 =n5,n3,n4,n1,n2
+                print(m5,m4,m3,m2,m1)
+            elif n2<n1: #n5 n3 n4 n2 n1
+                m1,m2,m3,m4,m5 =n5,n3,n4,n2,n1
+                print(m5,m4,m3,m2,m1)
+    elif n4<n1 and n4<n2 and n4<n3: #n5 n4
+        if n1<n2 and n1<n3: #n5 n4 n1
+            if n2<n3: #n5 n4 n1 n2 n3
+                m1,m2,m3,m4,m5 =n5,n4,n1,n2,n3
+                print(m5,m4,m3,m2,m1)
+            elif n3<n2: #n5 n4 n1 n3 n2
+                m1,m2,m3,m4,m5 =n5,n4,n1,n3,n2
+                print(m5,m4,m3,m2,m1)
+        elif n2<n1 and n2<n3: #n5 n4 n2
+            if n1<n3: #n5 n4 n2 n1 n3
+                m1,m2,m3,m4,m5 =n5,n4,n2,n1,n3
+                print(m5,m4,m3,m2,m1)
+            elif n3<n1: #n5 n4 n2 n3 n1
+                m1,m2,m3,m4,m5 =n5,n4,n2,n3,n1
+                print(m5,m4,m3,m2,m1)
+        elif n3<n1 and n3<n2: #n5 n4 n3
+            if n1<n2: #n5 n4 n3 n1 n2
+                m1,m2,m3,m4,m5 =n5,n4,n3,n1,n2
+                print(m5,m4,m3,m2,m1)
+            elif n2<n1: #n5 n4 n3 n2 n1
+                m1,m2,m3,m4,m5 =n5,n4,n3,n2,n1
+                print(m5,m4,m3,m2,m1)
+
+
+
+
+
+
 #La potencia del mayor número elevado al menor número
-pot = (num_inv(0))**(num_inv(4))
-print("5) La potencia del amyor número elevado al menor número es: ",pot)
+
+
+pot = (m5)**(m1)
+print("6) La potencia del amyor numero elevado al menor numero es: ",pot)
+
+
 #La raíz cúbica del menor número
-raiz = (num_inv(4))**(1/3)
-print("6) La raíz cúbica del menor número es: ",raiz)
+
+
+raiz = (m1)**(1/3)
+print("7) La raiz cúbica del menor número es: ",raiz)
 ```
+[![Captura-de-pantalla-2023-03-15-214254.png](https://i.postimg.cc/y6cCpX7b/Captura-de-pantalla-2023-03-15-214254.png)](https://postimg.cc/SjSPJ926)
 
 ## Punto 8
 
@@ -868,6 +1576,7 @@ elif frecuencia < 30E+3 :
 [![Captura-de-pantalla-2023-03-14-164332.png](https://i.postimg.cc/Gpbcznxm/Captura-de-pantalla-2023-03-14-164332.png)](https://postimg.cc/LJ0K67Wc)
 [![Captura-de-pantalla-2023-03-14-164449.png](https://i.postimg.cc/mrVT5pmN/Captura-de-pantalla-2023-03-14-164449.png)](https://postimg.cc/HJcGJzDV)
 
+[![Diagrama-sin-t-tulo-drawio-1.png](https://i.postimg.cc/K8kSxTd6/Diagrama-sin-t-tulo-drawio-1.png)](https://postimg.cc/NKcPxKGD)
 ## Punto 9
 
 Escriba un programa que reciba el nombre en minúsculas de un país de America y retorne la ciudad capital, si el país no pertenece al continente debe arrojar país no identificado.
