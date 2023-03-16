@@ -49,9 +49,12 @@ else :
 ```
 [![Captura-de-pantalla-2023-03-14-163201.png](https://i.postimg.cc/HxWf8p4b/Captura-de-pantalla-2023-03-14-163201.png)](https://postimg.cc/bGM6Kf5v)
 
-##Punto 3
+## Punto 3
 
 Realice un programa que lea un número enteros y determine si es par o impar.
+
+Primero que todo definimos nuestra variable n, como entero, luego generamos un input para que el usuario digite el numero que quiera evaluar, utilizando un condicional, determinamos que si el coeficiente es igual a 0, cuando dividimos en 2 el número, este número es par y si no, no lo es, esto exeptuando el número 2. Y finalmente imprimimos el resultado dado
+
 ``` python 
 ## Realice un programa que lea un número enteros y determine si es par o impar.
 n:int
@@ -87,6 +90,8 @@ else :
 ## Punto 5
 
 Realice un programa que lea tres números reales y determine si la suma de los dos primeros es mayor, menor o igual que el tercer número.
+
+Para esto definimos 3 variables como flotantes y generamos el input para digitar los tres numero, y haciendo uso de los condicionales,  evaluamos que si, la primera variable mas la segunda es mayos que la tercera, imprimios que la suma es mayor que el tercer número, por otro lado si la suma entre las dos primeras es menor que el tercer numero, imprimimos que la suma es menor, y finalmente si las suma de los numero es igual al tercero, imprimimos el texto que nos diga que es igual
 
 ``` python 
 a:float
@@ -866,6 +871,9 @@ elif frecuencia < 30E+3 :
 ## Punto 9
 
 Escriba un programa que reciba el nombre en minúsculas de un país de America y retorne la ciudad capital, si el país no pertenece al continente debe arrojar país no identificado.
+
+Para este punto necesitamos ponerle un input a nuestra variable pais, para lograr digitar el nombre del pais americano que queremos, luego generamos un match con nuestra variable, para asi poder tomar todos los cases posibles de una forma organizada, y ponemos cada uno de los casos de los paises de america que existen imprimiendo su respectiva capitál, y finalmente si el país no esta entre los casos, ponemos un case _:(para tomar todos los casos que no estan dentro de nuestra variable) e imprimir un texto que diga que el pais no se reconoce por nuestro programa.
+
 ```python
 Pais= (input("Ingrese un país de américa en minúscula"))
 match Pais:
